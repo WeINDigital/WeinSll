@@ -5,4 +5,6 @@ export const Routes = {
   HOME: 'Home',
   PROFILE: 'Profile',
   SETTINGS: 'Settings',
+  RESET_CODE: 'ResetCode',
+  NEW_PASSWORD: 'NewPassword',
 };

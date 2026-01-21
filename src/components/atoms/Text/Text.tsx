@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   body: {
     fontSize: fs(16),
-    color: '#111827',
+    color: 'rgba(102, 112, 133, 1)',
   },
   link: {
     fontSize: fs(14),

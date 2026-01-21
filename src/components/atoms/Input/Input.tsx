@@ -4,6 +4,7 @@ import {
   TextInput,
   StyleSheet,
   ViewStyle,
+  TextStyle,
 } from 'react-native';
 import { fs, hp, sp } from '../../../utils/dimensions';
 
@@ -15,19 +16,21 @@ interface Props {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   containerStyle?: ViewStyle;
+  InputStyle?: TextStyle;
 }
 
 export const InputAtom: React.FC<Props> = ({
   leftIcon,
   rightIcon,
   containerStyle,
+  InputStyle,
   ...props
 }) => {
   return (
     <View style={[styles.container, containerStyle]}>
       {leftIcon}
       <TextInput
-        style={styles.input}
+        style={[styles.input, InputStyle]}
         placeholderTextColor="#9CA3AF"
         {...props}
       />

@@ -6,6 +6,7 @@ import { PasswordInput } from '../../molecules/PasswordInput/PasswordInput';
 import { Button } from '../../atoms/Button/Button';
 import { Assets } from '../../../assets';
 import { hp, sp, wp } from '../../../utils/dimensions';
+import { SpacerAtom } from '../../atoms/Spacer/Spacer';
 
 interface Props {
   loading?: boolean;
@@ -30,8 +31,9 @@ export const LoginForm: React.FC<Props> = ({
   return (
     <View style={styles.container}>
       <TextAtom variant="title">Log In</TextAtom>
-      <TextAtom variant="subtitle">
-        Sed do eiusmod tempor incididunt ut labore
+      <SpacerAtom height={hp(8)}/>
+      <TextAtom variant="body">
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </TextAtom>
 
       <View style={styles.spacer} />

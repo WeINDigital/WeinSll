@@ -1,12 +1,16 @@
 import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from './components/atoms/Button/Button'
 import { Login } from './screens/LoginScreen'
 import { RootNavigator } from './navigation'
+import {  AuthProvider } from './components/atoms/AuthContext/AuthContext'
 
 const App = () => {
+
   return (
-    <RootNavigator />
+<AuthProvider>
+  <RootNavigator />
+</AuthProvider>
   )
 }
 

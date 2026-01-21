@@ -11,11 +11,13 @@ import { hp, wp } from '../../../utils/dimensions';
 interface Props {
   value: string;
   onChangeText: (text: string) => void;
+  text?: string;
 }
 
 export const PasswordInput: React.FC<Props> = ({
   value,
   onChangeText,
+  text
 }) => {
   const [secure, setSecure] = useState(true);
 
@@ -28,7 +30,7 @@ export const PasswordInput: React.FC<Props> = ({
 
   return (
     <View>
-       <TextAtom variant='subtitle' fw="500">Password</TextAtom>
+       <TextAtom variant='subtitle' fw="500">{text? text :"Password"}</TextAtom>
            <SpacerAtom width={"100%"} height={hp(6)}/>
  <InputAtom
       value={value}

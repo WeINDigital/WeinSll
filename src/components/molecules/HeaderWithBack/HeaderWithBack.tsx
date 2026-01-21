@@ -29,7 +29,7 @@ export const HeaderWithBack: React.FC<Props> = ({
         <SvgView svgFile={backIcon} width={wp(20)} height={hp(20)} />
       </Pressable>
 
-      <TextAtom variant="body" style={styles.title}>
+      <TextAtom variant='title' style={styles.title}>
         {title}
       </TextAtom>
     </View>
