@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { AuthTemplate } from '../components/templates/AuthTemplate/AuthTemplate';
 import { LoginForm } from '../components/organisms/LoginForm/LoginForm';
+import { useNavigation } from '@react-navigation/native';
+import { Routes } from '../navigation/routes';
+import { View } from 'react-native';
 
-export const LoginScreen = ({ navigation }: any) => {
+export const Login = () => {
+  const navigation = useNavigation<any>();
   const [loading, setLoading] = useState(false);
 
   const handleLogin = async (data: {
@@ -18,15 +22,15 @@ export const LoginScreen = ({ navigation }: any) => {
   };
 
   return (
-    <AuthTemplate  ViewStyles={{flex:1, backgroundColor:"white",justifyContent: 'center',alignItems:"center", }}  >
+    <View style={{flex:1, backgroundColor:"white",justifyContent:'center'}}>
       <LoginForm
         loading={loading}
         onSubmit={handleLogin}
         onForgotPassword={() =>{
-        //   navigation.navigate('ForgotPassword')
+          navigation.navigate(Routes.FORGOT_PASSWORD)
         }
         }
       />
-    </AuthTemplate>
+    </View>
   );
 };

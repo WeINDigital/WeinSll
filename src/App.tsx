@@ -1,13 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { Button } from './components/atoms/Button/Button'
-import { LoginScreen } from './screens/LoginScreen'
+import { Login } from './screens/LoginScreen'
+import { RootNavigator } from './navigation'
 
 const App = () => {
   return (
-    // <View style={{ flex: 1, backgroundColor:"white"}}>
-      <LoginScreen/>
-    // </View>
+    <RootNavigator />
   )
 }
 

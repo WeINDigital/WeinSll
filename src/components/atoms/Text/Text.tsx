@@ -2,7 +2,7 @@ import React from 'react';
 import { Text as RNText, TextProps, StyleSheet } from 'react-native';
 import { fs } from '../../../utils/dimensions';
 
-type Variant = 'title' | 'subtitle' | 'body' | 'link' | 'caption';
+type Variant = 'title' | 'subtitle' | 'body' | 'link' | 'caption' | 'error';
 
 interface Props extends TextProps {
   variant?: Variant;
@@ -46,5 +46,9 @@ const styles = StyleSheet.create({
   caption: {
     fontSize: fs(12),
     color: '#9CA3AF',
+  },
+   error: {
+    fontSize: fs(12),
+    color: 'red',
   },
 });
