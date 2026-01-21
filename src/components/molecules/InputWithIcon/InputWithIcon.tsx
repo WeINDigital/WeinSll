@@ -5,6 +5,7 @@ import { TextAtom } from '../../atoms/Text/Text';
 import { SpacerAtom } from '../../atoms/Spacer/Spacer';
 import Svg from 'react-native-svg';
 import SvgView from '../../atoms/SvgView/SvgView';
+import { hp, wp } from '../../../utils/dimensions';
 
 
 interface Props {
@@ -23,10 +24,10 @@ export const InputWithIcon: React.FC<Props> = ({
   return (
     <View style={{width:"100%"}}>
       <TextAtom variant='subtitle' fw="500">{label}</TextAtom>
-     <SpacerAtom width={"100%"} height={6}/>
+     <SpacerAtom width={"100%"} height={hp(6)}/>
       <InputAtom
         {...props}
-        leftIcon={<SvgView svgFile={icon} width={20} height={20} />}
+        leftIcon={<SvgView svgFile={icon} width={wp(20)} height={hp(20)} />}
       />
     </View>
   );

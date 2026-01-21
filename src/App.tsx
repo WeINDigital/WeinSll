@@ -5,9 +5,9 @@ import { LoginScreen } from './screens/LoginScreen'
 
 const App = () => {
   return (
-    <View style={{ flex: 1, backgroundColor:"white"}}>
+    // <View style={{ flex: 1, backgroundColor:"white"}}>
       <LoginScreen/>
-    </View>
+    // </View>
   )
 }
 

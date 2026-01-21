@@ -5,6 +5,7 @@ import { InputWithIcon } from '../../molecules/InputWithIcon/InputWithIcon';
 import { PasswordInput } from '../../molecules/PasswordInput/PasswordInput';
 import { Button } from '../../atoms/Button/Button';
 import { Assets } from '../../../assets';
+import { hp, sp, wp } from '../../../utils/dimensions';
 
 interface Props {
   loading?: boolean;
@@ -72,19 +73,19 @@ export const LoginForm: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 20,
+    paddingHorizontal: wp(16),
     backgroundColor: 'white',
     width: '100%',
     justifyContent: 'center',
   },
   spacer: {
-    height: 16,
+    height: hp(16),
   },
   spacerLg: {
-    height: 32,
+    height: hp(32),
   },
   forgot: {
     textAlign: 'right',
-    marginTop: 8,
+    marginTop: sp(8),
   },
 });

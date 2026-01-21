@@ -2,11 +2,12 @@ import React from 'react';
 import { View } from 'react-native';
 import styles from './styles';
 import { SvgViewProps } from './types';
+import { hp, wp } from '../../../utils/dimensions';
 
 export const SvgView: React.FC<SvgViewProps> = ({
   svgFile: SvgComponent,
-  width = 24,
-  height = 24,
+  width = wp(24),
+  height = hp(24),
   ...svgProps
 }) => {
   return (

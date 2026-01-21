@@ -23,8 +23,8 @@ export const AuthTemplate: React.FC<Props> = ({
   ViewStyles,
 }) => {
   return (
-    <KeyboardAvoidingView
-      style={styles.flex}
+    <View style={{flex:1,backgroundColor:"white",justifyContent: 'center' }} >
+   <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <ScrollView contentContainerStyle={styles.container}>
@@ -32,6 +32,8 @@ export const AuthTemplate: React.FC<Props> = ({
         <View style={[styles.content,ViewStyles]}>{children}</View>
       </ScrollView>
     </KeyboardAvoidingView>
+    </View>
+ 
   );
 };
 
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   container: {
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
     flexGrow: 1,
   },
   content: {

@@ -5,6 +5,7 @@ import { TextAtom } from '../../atoms/Text/Text';
 import { SpacerAtom } from '../../atoms/Spacer/Spacer';
 import SvgView from '../../atoms/SvgView/SvgView';
 import { Assets } from '../../../assets';
+import { hp, wp } from '../../../utils/dimensions';
 
 
 interface Props {
@@ -28,16 +29,16 @@ export const PasswordInput: React.FC<Props> = ({
   return (
     <View>
        <TextAtom variant='subtitle' fw="500">Password</TextAtom>
-           <SpacerAtom width={"100%"} height={6}/>
+           <SpacerAtom width={"100%"} height={hp(6)}/>
  <InputAtom
       value={value}
       onChangeText={onChangeText}
       placeholder="Password"
       secureTextEntry={secure}
-      leftIcon={<SvgView svgFile={lock} width={20} height={20} />}
+      leftIcon={<SvgView svgFile={lock} width={wp(20)} height={hp(20)} />}
       rightIcon={
         <Pressable onPress={() => setSecure(!secure)}>
-          {<SvgView svgFile={eye} width={20} height={20} />}
+          {<SvgView svgFile={eye} width={wp(20)} height={hp(20)} />}
         </Pressable>
       }
     />

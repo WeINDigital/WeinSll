@@ -5,6 +5,7 @@ import {
   StyleSheet,
   ViewStyle,
 } from 'react-native';
+import { fs, hp, sp } from '../../../utils/dimensions';
 
 interface Props {
   value?: string;
@@ -38,18 +39,18 @@ export const InputAtom: React.FC<Props> = ({
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: 48,
-    borderWidth: 1,
+    height: hp(48),
+    borderWidth: sp(1),
     borderColor: '#E5E7EB',
-    borderRadius: 12,
+    borderRadius: sp(12),
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 12,
-    gap: 8,
+    paddingHorizontal: sp(12),
+    gap: sp(8),
   },
   input: {
     flex: 1,
-    fontSize: 16,
+    fontSize: fs(16),
     color: '#111827',
   },
 });

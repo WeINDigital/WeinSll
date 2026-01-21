@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text as RNText, TextProps, StyleSheet } from 'react-native';
+import { fs } from '../../../utils/dimensions';
 
 type Variant = 'title' | 'subtitle' | 'body' | 'link' | 'caption';
 
@@ -24,26 +25,26 @@ export const TextAtom: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 36,
+    fontSize: fs(36),
     fontWeight: '700',
     color: '#111827',
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: fs(14),
     color: 'rgba(52, 64, 84, 1)',
     marginTop: 6,
   },
   body: {
-    fontSize: 16,
+    fontSize: fs(16),
     color: '#111827',
   },
   link: {
-    fontSize: 14,
+    fontSize: fs(14),
     color: '#7C5CFC',
     fontWeight: '500',
   },
   caption: {
-    fontSize: 12,
+    fontSize: fs(12),
     color: '#9CA3AF',
   },
 });

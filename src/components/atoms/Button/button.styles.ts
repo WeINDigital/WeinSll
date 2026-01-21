@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { fs, hp, sp } from '../../../utils/dimensions';
 
 export const colors = {
   primary: '#6C5CE7',
@@ -10,9 +11,9 @@ export const colors = {
 
 export const styles = StyleSheet.create({
   base: {
-    height: 48,
-    paddingHorizontal: 16,
-    borderRadius: 10,
+    height: hp(48),
+    paddingHorizontal: sp(16),
+    borderRadius: sp(10),
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -27,7 +28,7 @@ export const styles = StyleSheet.create({
   },
 
   outline: {
-    borderWidth: 1,
+    borderWidth: sp(1),
     borderColor: colors.primary,
     backgroundColor: 'transparent',
   },
@@ -42,11 +43,13 @@ export const styles = StyleSheet.create({
 
   textPrimary: {
     color: colors.white,
+    fontSize: fs(16),
     fontWeight: '600',
   },
 
   textSecondary: {
     color: colors.primary,
+    fontSize: fs(16),
     fontWeight: '600',
   },
 });
