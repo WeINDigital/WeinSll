@@ -3,6 +3,8 @@ import { Pressable, View } from 'react-native';
 import { InputAtom } from '../../atoms/Input/Input';
 import { TextAtom } from '../../atoms/Text/Text';
 import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import SvgView from '../../atoms/SvgView/SvgView';
+import { Assets } from '../../../assets';
 
 
 interface Props {
@@ -16,6 +18,13 @@ export const PasswordInput: React.FC<Props> = ({
 }) => {
   const [secure, setSecure] = useState(true);
 
+  const {
+    images: {
+      components: {lock,eye},
+    },
+  } = Assets;
+
+
   return (
     <View>
        <TextAtom variant='subtitle' fw="500">Password</TextAtom>
@@ -25,10 +34,10 @@ export const PasswordInput: React.FC<Props> = ({
       onChangeText={onChangeText}
       placeholder="Password"
       secureTextEntry={secure}
-    //   leftIcon={<IconAtom name="lock" />}
+      leftIcon={<SvgView svgFile={lock} width={20} height={20} />}
       rightIcon={
         <Pressable onPress={() => setSecure(!secure)}>
-          {/* <IconAtom name={secure ? 'eye-off' : 'eye'} /> */}
+          {<SvgView svgFile={eye} width={20} height={20} />}
         </Pressable>
       }
     />

@@ -3,10 +3,12 @@ import { InputAtom } from '../../atoms/Input/Input';
 import { View } from 'react-native';
 import { TextAtom } from '../../atoms/Text/Text';
 import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import Svg from 'react-native-svg';
+import SvgView from '../../atoms/SvgView/SvgView';
 
 
 interface Props {
-  icon: string;
+  icon: any;
   value: string;
   label?:string;
   placeholder?: string;
@@ -24,7 +26,7 @@ export const InputWithIcon: React.FC<Props> = ({
      <SpacerAtom width={"100%"} height={6}/>
       <InputAtom
         {...props}
-      //   leftIcon={<IconAtom name={icon} />}
+        leftIcon={<SvgView svgFile={icon} width={20} height={20} />}
       />
     </View>
   );

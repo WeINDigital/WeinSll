@@ -10,7 +10,7 @@ export const colors = {
 
 export const styles = StyleSheet.create({
   base: {
-    height: 44,
+    height: 48,
     paddingHorizontal: 16,
     borderRadius: 10,
     flexDirection: 'row',

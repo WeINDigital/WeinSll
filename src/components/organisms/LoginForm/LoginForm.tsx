@@ -4,6 +4,7 @@ import { TextAtom } from '../../atoms/Text/Text';
 import { InputWithIcon } from '../../molecules/InputWithIcon/InputWithIcon';
 import { PasswordInput } from '../../molecules/PasswordInput/PasswordInput';
 import { Button } from '../../atoms/Button/Button';
+import { Assets } from '../../../assets';
 
 interface Props {
   loading?: boolean;
@@ -19,6 +20,12 @@ export const LoginForm: React.FC<Props> = ({
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+    const {
+      images: {
+        components: {user},
+      },
+    } = Assets;
+    
   return (
     <View style={styles.container}>
       <TextAtom variant="title">Log In</TextAtom>
@@ -30,7 +37,7 @@ export const LoginForm: React.FC<Props> = ({
 
       <InputWithIcon
       label='User name'
-        icon="user"
+        icon={user}
         placeholder="Username"
         value={username}
         onChangeText={setUsername}
