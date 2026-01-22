@@ -6,6 +6,7 @@ type AuthContextType = {
   logout: () => void;
 };
 
+
 export const AuthContext = createContext<AuthContextType>(
   {} as AuthContextType
 );

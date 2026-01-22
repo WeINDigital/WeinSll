@@ -1,9 +1,10 @@
 import { View, Text } from 'react-native';
 import React, { useState } from 'react';
-import { AuthTemplate } from '../components/templates/AuthTemplate/AuthTemplate';
 import { useNavigation } from '@react-navigation/native';
-import { NewPasswordForm } from '../components/organisms/NewPasswordForm/NewPasswordForm';
-import { Routes } from '../navigation/routes';
+import { Routes } from '../../navigation/routes';
+import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
+import { NewPasswordForm } from '../../components/organisms/NewPasswordForm/NewPasswordForm';
+
 
 export const NewPassword = () => {
   const navigation = useNavigation<any>();

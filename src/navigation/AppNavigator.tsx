@@ -1,9 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Routes } from './routes';
-import Home from '../screens/Home';
-import Profile from '../screens/Profile';
-import Settings from '../screens/Settings';
+import Profile from '../screens/common/Profile';
+import Settings from '../screens/common/Settings';
+import Home from '../screens/common/Home/Home';
 
 
 

@@ -11,6 +11,7 @@ export const colors = {
 
 export const styles = StyleSheet.create({
   base: {
+    width: '100%',
     height: hp(48),
     paddingHorizontal: sp(16),
     borderRadius: sp(10),

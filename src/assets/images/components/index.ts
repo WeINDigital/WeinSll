@@ -23,6 +23,7 @@ import shoppingBag from "./shoppingBag.svg";
 import shoppingGray from "./shoppingGray.svg";
 import user from "./user.svg";
 import users from "./users.svg";
+import closeIcon from './closeIcon.svg'
 
 export class Components {
     static backIcon = BackIcon;
@@ -50,4 +51,5 @@ export class Components {
     static shoppingGray = shoppingGray;
     static user = user;
     static users = users;
+    static closeIcon =closeIcon
 }

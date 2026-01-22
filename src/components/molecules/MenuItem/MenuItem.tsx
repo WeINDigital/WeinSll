@@ -17,7 +17,6 @@ export const MenuItem: React.FC<Props> = ({
 }) => {
   return (
     <Pressable onPress={onPress} style={styles.container}>
-      {/* <IconAtom name={icon} size={22} /> */}
       <View style={styles.text}>
         <TextAtom>{title}</TextAtom>
         {description && (

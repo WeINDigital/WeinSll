@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import AuthNavigator from './AuthNavigator';
 import AppNavigator from './AppNavigator';
-import { AuthContext } from '../components/atoms/AuthContext/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 export default function RootNavigator() {
   const { isLoggedIn } = useContext(AuthContext);

@@ -89,5 +89,6 @@ const styles = StyleSheet.create({
   forgot: {
     textAlign: 'right',
     marginTop: sp(8),
+    alignSelf: 'flex-end',
   },
 });

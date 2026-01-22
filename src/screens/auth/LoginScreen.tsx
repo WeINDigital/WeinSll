@@ -1,10 +1,9 @@
 import React, { use, useContext, useState } from 'react';
-import { AuthTemplate } from '../components/templates/AuthTemplate/AuthTemplate';
-import { LoginForm } from '../components/organisms/LoginForm/LoginForm';
 import { useNavigation } from '@react-navigation/native';
-import { Routes } from '../navigation/routes';
 import { View } from 'react-native';
-import { AuthContext } from '../components/atoms/AuthContext/AuthContext';
+import { LoginForm } from '../../components/organisms/LoginForm/LoginForm';
+import { Routes } from '../../navigation/routes';
+import { AuthContext } from '../../context/AuthContext';
 
 export const Login = () => {
   const navigation = useNavigation<any>();
@@ -18,7 +17,7 @@ const handleLogin = async (data: {
  setLoading(true);
 
   setTimeout(() => {
-    login();  
+    login("salesman");  
     setLoading(false);
   }, 1500);
 };

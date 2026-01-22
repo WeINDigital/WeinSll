@@ -46,6 +46,6 @@
     </scenes>
     <resources>
         <image name="SplashIcon" width="143.33332824707031" height="74.333335876464844"/>
-        <image name="splashBackGround" width="250" height="540.66668701171875"/>
+        <image name="splashBackGround" width="125" height="270.66665649414062"/>
     </resources>
 </document>
