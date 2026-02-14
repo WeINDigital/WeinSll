@@ -7,4 +7,7 @@ export const Routes = {
   SETTINGS: 'Settings',
   RESET_CODE: 'ResetCode',
   NEW_PASSWORD: 'NewPassword',
+  CREATE_INVOICE:"CreateInvoice",
+  CAMERA_SCREEN :'CameraScreen',
+
 };

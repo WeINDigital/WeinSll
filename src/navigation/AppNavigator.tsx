@@ -4,6 +4,8 @@ import { Routes } from './routes';
 import Profile from '../screens/common/Profile';
 import Settings from '../screens/common/Settings';
 import Home from '../screens/common/Home/Home';
+import CreateInvoice from '../screens/createInvoice/CreateInvoice';
+import CameraScreen from '../screens/CameraScreen/CameraScreen';
 
 
 
@@ -15,6 +17,8 @@ export default function AppNavigator() {
       <Stack.Screen name={Routes.HOME} component={Home} />
       <Stack.Screen name={Routes.PROFILE} component={Profile} />
       <Stack.Screen name={Routes.SETTINGS} component={Settings} />
+      <Stack.Screen name={Routes.CREATE_INVOICE} component={CreateInvoice} />
+      <Stack.Screen name={Routes.CAMERA_SCREEN} component={CameraScreen} />
     </Stack.Navigator>
   );
 }
