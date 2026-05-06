@@ -10,15 +10,25 @@ import {
 import { HeaderWithBack } from '../../molecules/HeaderWithBack/HeaderWithBack';
 import Separator from '../../atoms/Separator';
 import BottomContainer from '../../molecules/BottomContainer/BottomContainer';
+import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import { hp } from '../../../utils/dimensions';
 
-interface Props {
+interface Props{
   title?: string;
   onBack?: () => void;
   children: React.ReactNode;
   ViewStyles?: ViewStyle;
   top?: boolean;
+  loading?: boolean;
+  disabled?: boolean;
   onPress?: () => void;
   bottomTitle?: string;
+  cancelBottomTitle?: string;
+  onCancelPress?: () => void;
+  firstBottomTitle?: string;
+  firstBottomOnPress?: () => void;
+  firstBottomLoading?: boolean;
+  firstBottomDisabled?: boolean;
 }
 
 export const AuthTemplate: React.FC<Props> = ({
@@ -29,6 +39,14 @@ export const AuthTemplate: React.FC<Props> = ({
   top = false,
   bottomTitle,
   onPress,
+  loading,
+  disabled,
+  cancelBottomTitle,
+  onCancelPress,
+  firstBottomTitle = '',
+  firstBottomOnPress,
+  firstBottomLoading,
+  firstBottomDisabled,
 }) => {
   return (
     <View
@@ -42,16 +60,19 @@ export const AuthTemplate: React.FC<Props> = ({
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-        <ScrollView contentContainerStyle={styles.container}>
-          <View style={{ flex: 1 }}>
             <HeaderWithBack title={title} onBack={onBack} />
             <Separator mt={23} mb={16} />
+
+        <ScrollView contentContainerStyle={[styles.container,{paddingBottom:bottomTitle ? hp(120) : 0}]}>
+          <View style={{ flex: 1 }}>
 
             <View style={[styles.content, ViewStyles]}>{children}</View>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
-      {bottomTitle && <BottomContainer title={bottomTitle} onPress={onPress} />}
+      {bottomTitle && <BottomContainer title={bottomTitle} onPress={onPress} loading={loading} disabled={disabled} />}
+      {cancelBottomTitle && <BottomContainer title={firstBottomTitle} onPress={firstBottomOnPress} loading={firstBottomLoading} disabled={firstBottomDisabled} bottomTwo titleTwo={cancelBottomTitle} onPressTwo={onCancelPress}  />}
+    
     </View>
   );
 };
@@ -63,6 +84,7 @@ const styles = StyleSheet.create({
   container: {
     // paddingHorizontal: 20,
     flexGrow: 1,
+    
   },
   content: {
     marginTop: 0,

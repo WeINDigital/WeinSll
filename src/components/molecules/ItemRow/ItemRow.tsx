@@ -10,12 +10,14 @@ type Props = {
   name: string;
   price: number | string;
   onDelete: () => void;
+  removeItem?:boolean;
 };
 
 const ItemRow: React.FC<Props> = ({  index,
   name,
   price,
   onDelete,
+  removeItem,
  }) => {
     const {
         images:{
@@ -24,21 +26,23 @@ const ItemRow: React.FC<Props> = ({  index,
     } = Assets
   return (
     <View style={styles.row}>
-      <View style={styles.boxSmall}>
+      <View style={[styles.boxSmall,{ borderWidth:removeItem ? 0 : 1}]}>
         <TextAtom fw="600">{index + 1}</TextAtom>
       </View>
 
-      <View style={styles.boxName}>
+      <View style={[styles.boxName,{ borderWidth:removeItem ? 0 : 1}]}>
         <TextAtom fw="500">{name}</TextAtom>
       </View>
 
-      <View style={styles.boxPrice}>
+      <View style={[styles.boxPrice,{ borderWidth:removeItem ? 0 : 1}]}>
         <TextAtom fw="500">{price}</TextAtom>
       </View>
 
-      <Pressable onPress={onDelete} style={styles.delete}>
-        <SvgView svgFile={remove} width={wp(36)} height={hp(36)} />
-      </Pressable>
+      {removeItem ? null : (
+        <Pressable onPress={onDelete} style={styles.delete}>
+          <SvgView svgFile={remove} width={wp(36)} height={hp(36)} />
+        </Pressable>
+      )}
     </View>
   )
 }

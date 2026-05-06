@@ -44,7 +44,7 @@ const [collectionDate, setCollectionDate] =
   }, [barcode]);
 
 const onReview = () => {
-  navigation.navigate(Routes.REVIEW_INVOICE, {
+  navigation.navigate(Routes.CONFIRM_INVOICE, {
     items,
     paymentType,
     totalAmount,
@@ -63,6 +63,8 @@ const onReview = () => {
       title="Create Invoice"
       bottomTitle="Review"
       onPress={onReview}
+      disabled={items.length === 0 || totalAmount === '' }
+      loading={false}
     >
       <CreateInvoiceTemplate
         items={items}

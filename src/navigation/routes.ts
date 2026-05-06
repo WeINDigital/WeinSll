@@ -9,5 +9,6 @@ export const Routes = {
   NEW_PASSWORD: 'NewPassword',
   CREATE_INVOICE:"CreateInvoice",
   CAMERA_SCREEN :'CameraScreen',
+  CONFIRM_INVOICE:'ConfirmInvoice',
 
 };

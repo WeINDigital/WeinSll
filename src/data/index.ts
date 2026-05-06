@@ -54,3 +54,50 @@ export const dashboardData = [
     percent: '30%',
   },
 ];
+
+export const clientNameData = [
+  {
+    id: '1',
+    value: 'Moataz Mahdi',
+    text: 'Client Name',
+  }
+]
+
+export const paymentTypeData = [
+  {
+    id: '1',
+    value: 'Credit',
+    text: 'Payment Type',
+  },
+   {
+    id: '2',
+    value: '-32 EGP',
+    text: 'Discount',
+  },
+  
+]
+
+export const amountData = [
+  {
+    id: '1',
+    value: '232 EGP',
+    text: 'Total Amount',
+  },
+   {
+    id: '2',
+    value: '100 EGP',
+    text: 'Received',
+  },
+    {
+    id: '3',
+    value: '132 EGP',
+    text: 'Remaining',
+  },
+   {
+    id: '4',
+    value: '2022-01-06T00:00:00.000Z',
+    text: 'Collection Date',
+  },
+  
+  
+]

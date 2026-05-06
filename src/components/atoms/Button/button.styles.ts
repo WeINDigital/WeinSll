@@ -7,6 +7,7 @@ export const colors = {
   danger: '#E74C3C',
   white: '#FFFFFF',
   gray: '#B2BEC3',
+  black: '#000000', 
 };
 
 export const styles = StyleSheet.create({
@@ -19,7 +20,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   primary: {
     backgroundColor: colors.primary,
   },
@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
 
   outline: {
     borderWidth: sp(1),
-    borderColor: colors.primary,
+    borderColor: colors.gray,
     backgroundColor: 'transparent',
   },
 
@@ -49,7 +49,7 @@ export const styles = StyleSheet.create({
   },
 
   textSecondary: {
-    color: colors.primary,
+    color: colors.black,
     fontSize: fs(16),
     fontWeight: '600',
   },
