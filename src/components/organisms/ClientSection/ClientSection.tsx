@@ -3,14 +3,14 @@ import React from 'react'
 import SelectClientSheet from '../SelectClientSheet/SelectClientSheet'
 import { wp } from '../../../utils/dimensions';
 
-const ClientSection = () => {
+const ClientSection = ({data, title}) => {
         const [client, setClient] = React.useState('');
     
   return (
-    <View style={{flex:1,paddingHorizontal:wp(16)}}>
-      <SelectClientSheet Text='Client' value={client} onSelect={(value) => {
+    <View style={{flex:1,paddingHorizontal: title ? 0 :  wp(16)}}>
+      <SelectClientSheet Text={ title ??'Client'} value={client} onSelect={(value) => {
           setClient(value);
-        }} />
+        }} DATA={data} />
     </View>
   )
 }

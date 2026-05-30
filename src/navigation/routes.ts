@@ -10,5 +10,7 @@ export const Routes = {
   CREATE_INVOICE:"CreateInvoice",
   CAMERA_SCREEN :'CameraScreen',
   CONFIRM_INVOICE:'ConfirmInvoice',
-
+  DISCOUNTS:'Discounts',
+  CLIENTS:'Clients',
+  CREATE_DISCOUNTS:'CreateDiscounts',
 };

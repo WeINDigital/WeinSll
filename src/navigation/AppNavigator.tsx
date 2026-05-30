@@ -7,6 +7,9 @@ import Home from '../screens/common/Home/Home';
 import CreateInvoice from '../screens/createInvoice/CreateInvoice';
 import CameraScreen from '../screens/CameraScreen/CameraScreen';
 import ConfirmInvoice from '../screens/confirmInvoice/ConfirmInvoice';
+import Discounts from '../screens/discounts/Discounts';
+import Clients from '../screens/common/clients/Clients';
+import CreateDiscounts from '../screens/createDiscounts/CreateDiscounts';
 
 
 
@@ -21,6 +24,9 @@ export default function AppNavigator() {
       <Stack.Screen name={Routes.CREATE_INVOICE} component={CreateInvoice} />
       <Stack.Screen name={Routes.CAMERA_SCREEN} component={CameraScreen} />
       <Stack.Screen name={Routes.CONFIRM_INVOICE} component={ConfirmInvoice} />
+      <Stack.Screen name={Routes.DISCOUNTS} component={Discounts} />
+      <Stack.Screen name={Routes.CLIENTS} component={Clients} />
+      <Stack.Screen name={Routes.CREATE_DISCOUNTS} component={CreateDiscounts} />
     </Stack.Navigator>
   );
 }

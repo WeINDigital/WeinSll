@@ -54,4 +54,5 @@ export class Components {
   static users = users;
   static closeIcon = closeIcon;
   static dropDown = dropDown;
+  static clintImage = require('./clintImage.png');
 }

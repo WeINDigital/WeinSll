@@ -6,6 +6,8 @@ import SvgView from '../../atoms/SvgView/SvgView';
 import { Assets } from '../../../assets';
 import { hp, wp } from '../../../utils/dimensions';
 import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Routes } from '../../../navigation/routes';
 
 const {
   images: {
@@ -21,53 +23,67 @@ const {
   },
 } = Assets;
 
-const menuItems = [
-  { title: 'Home', icon: home },
+
+  const menuItems = [
+  { title: 'Home', icon: home,screenName:Routes.HOME },
   {
     title: 'Clients',
     icon: users,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    screenName:Routes.CLIENTS,
   },
   {
     title: 'Discounts',
     icon: percent,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    screenName:Routes.DISCOUNTS,
   },
   {
     title: 'Receipts Center',
     icon: fileText,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    screenName:'',
   },
   {
     title: 'Collections',
     icon: creditCard,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    screenName:'',
   },
   {
     title: 'Inventory',
     icon: shoppingBag,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    screenName:'',
   },
   {
     title: 'Visit Forum',
     icon: lifeBuoy,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    screenName:'',
   },
 ];
 
-
 const HomeMenu = ({ onClose,onLogOut}: { onClose: () => void,onLogOut :()=>void }) => {
+  const navigation = useNavigation();
+
+ const handleNavigate = (screen: string) => {
+    navigation.navigate(screen);
+    onClose();
+  };
+
   return (
     <View style={{ flex: 1 }}>
       {menuItems.map((item, i) => (
         <TouchableOpacity
           key={i}
+          onPress={() => handleNavigate(item.screenName ? item.screenName : '')}
           style={{
             flexDirection: 'row',
             alignItems: 'center',

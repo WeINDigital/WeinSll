@@ -13,4 +13,7 @@ export type AppStackParamList = {
   CreateInvoice:undefined;
   CameraScreen:undefined;
   ConfirmInvoice:undefined;
+  Discounts:undefined;
+  Clients:undefined;
+  CreateDiscounts:undefined;
 };
