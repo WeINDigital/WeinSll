@@ -3,8 +3,6 @@ export type DiscountRequest = {
   paymentType?: string;
   items?: any[];
   totalAmount?: number | string;
-  receivedAmount?: number | string;
-  collectionDate?: string | Date;
   reason?: string;
 };
 

@@ -5,10 +5,10 @@ import { TextAtom } from '../Text/Text';
 type StatusType = 'approved' | 'rejected' | 'in_progress';
 
 interface Props {
-  status: StatusType;
+  status?: string;
 }
 
-const STATUS_STYLES = {
+const STATUS_STYLES: Record<StatusType, { bg: string; text: string; label: string }> = {
   approved: {
     bg: '#ECFDF3',
     text: '#027A48',
@@ -26,12 +26,20 @@ const STATUS_STYLES = {
   },
 };
 
+const normalize = (s?: string) =>
+  (s || '')
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_');
+
 const StatusBadge: React.FC<Props> = ({ status }) => {
-  const current = STATUS_STYLES[status];
+  const key = (normalize(status) as StatusType) || 'in_progress';
+  const current = STATUS_STYLES[key] || STATUS_STYLES.in_progress;
 
   return (
-    <View style={[styles.container, { backgroundColor: current.bg }]}>
-      <TextAtom style={[styles.text, { color: current.text }]}>
+    <View style={[styles.container, { backgroundColor: current.bg }]}> 
+      <TextAtom style={[styles.text, { color: current.text }]}> 
         {current.label}
       </TextAtom>
     </View>
