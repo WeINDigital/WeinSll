@@ -13,4 +13,5 @@ export const Routes = {
   DISCOUNTS:'Discounts',
   CLIENTS:'Clients',
   CREATE_DISCOUNTS:'CreateDiscounts',
+  DISCOUNT_DETAILS: 'DiscountDetails',
 };

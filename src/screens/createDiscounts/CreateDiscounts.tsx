@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import CreateDiscountTemplate from '../../components/templates/CreateDiscountTemplate/CreateDiscountTemplate';
+import { requestDiscount } from '../../services/discounts';
+import { Routes } from '../../navigation/routes';
 
 type Item = {
   id: string;
@@ -47,18 +49,23 @@ const CreateDiscounts = () => {
     ]);
   }, [barcode]);
 
-  const onReview = () => {
-    // navigation.navigate(Routes.CONFIRM_INVOICE, {
-    //   items,
-    //   paymentType,
-    //   totalAmount,
-    //   receivedAmount,
-    //   collectionDate,
-    //   remainingAmount:
-    //     paymentType === 'credit'
-    //       ? Number(totalAmount) - Number(receivedAmount)
-    //       : 0,
-    // });
+  const onReview = async () => {
+    const payload = {
+      clientId: 'unknown',
+      paymentType,
+      items,
+      totalAmount,
+      receivedAmount,
+      collectionDate,
+      reason,
+    };
+
+    try {
+      const res = await requestDiscount(payload as any);
+      (navigation as any).navigate(Routes.DISCOUNT_DETAILS as any, { discount: res } as any);
+    } catch (err) {
+      console.warn('discount request failed', err);
+    }
   };
   return (
     <AuthTemplate
