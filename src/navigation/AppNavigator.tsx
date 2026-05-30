@@ -10,6 +10,7 @@ import ConfirmInvoice from '../screens/confirmInvoice/ConfirmInvoice';
 import Discounts from '../screens/discounts/Discounts';
 import Clients from '../screens/common/clients/Clients';
 import CreateDiscounts from '../screens/createDiscounts/CreateDiscounts';
+import DiscountDetails from '../screens/discounts/DiscountDetails';
 
 
 
@@ -27,6 +28,7 @@ export default function AppNavigator() {
       <Stack.Screen name={Routes.DISCOUNTS} component={Discounts} />
       <Stack.Screen name={Routes.CLIENTS} component={Clients} />
       <Stack.Screen name={Routes.CREATE_DISCOUNTS} component={CreateDiscounts} />
+      <Stack.Screen name={Routes.DISCOUNT_DETAILS} component={DiscountDetails} />
     </Stack.Navigator>
   );
 }
