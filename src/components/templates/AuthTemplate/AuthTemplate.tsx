@@ -10,7 +10,6 @@ import {
 import { HeaderWithBack } from '../../molecules/HeaderWithBack/HeaderWithBack';
 import Separator from '../../atoms/Separator';
 import BottomContainer from '../../molecules/BottomContainer/BottomContainer';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
 import { hp } from '../../../utils/dimensions';
 
 interface Props{
@@ -29,6 +28,7 @@ interface Props{
   firstBottomOnPress?: () => void;
   firstBottomLoading?: boolean;
   firstBottomDisabled?: boolean;
+  status?: 'approved' | 'rejected' | 'in_progress';
 }
 
 export const AuthTemplate: React.FC<Props> = ({
@@ -47,6 +47,7 @@ export const AuthTemplate: React.FC<Props> = ({
   firstBottomOnPress,
   firstBottomLoading,
   firstBottomDisabled,
+  status
 }) => {
   return (
     <View
@@ -60,13 +61,13 @@ export const AuthTemplate: React.FC<Props> = ({
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
-            <HeaderWithBack title={title} onBack={onBack} />
+            <HeaderWithBack title={title} onBack={onBack} status={status} />
             <Separator mt={23} mb={16} />
 
         <ScrollView contentContainerStyle={[styles.container,{paddingBottom:bottomTitle ? hp(120) : 0}]}>
           <View style={{ flex: 1 }}>
 
-            <View style={[styles.content, ViewStyles]}>{children}</View>
+            <View style={[styles.content, ViewStyles]}>{React.Children.toArray(children)}</View>
           </View>
         </ScrollView>
       </KeyboardAvoidingView>
