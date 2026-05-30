@@ -35,7 +35,7 @@ export const NewPasswordForm: React.FC<Props> = ({
         title="Change Password"
         loading={loading}
         disabled={!password}
-        onPress={() => onSubmit({password })}
+        onPress={() => onSubmit(password)}
       />
     </View>
   );

@@ -8,7 +8,7 @@ type Item = {
   id: string;
   name: string;
   price: number;
-  barcode: string;
+  barcode?: string;
 };
 
 const CreateDiscounts = () => {

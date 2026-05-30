@@ -39,18 +39,15 @@ export const OTPInput: React.FC<Props> = ({
     <SpacerAtom height={hp(6)}/>
     <View style={styles.container}>
       {Array.from({ length }).map((_, i) => (
-        <InputAtom
+        <TextInput
           key={i}
-          ref={(ref: TextInput) =>
-              (inputsRef.current[i] = ref)
-            }
-          placeholder='0'
+          ref={(ref: TextInput | null) => { inputsRef.current[i] = ref }}
+          placeholder="0"
           value={value[i] || ''}
           keyboardType="number-pad"
           maxLength={1}
           onChangeText={text => handleChange(text, i)}
-          containerStyle={styles.box}
-          InputStyle = {styles.input}
+          style={[styles.input, styles.box] as any}
         />
       ))}
     </View>

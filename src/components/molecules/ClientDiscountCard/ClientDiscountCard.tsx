@@ -11,7 +11,14 @@ import StatusBadge from '../../atoms/StatusBadge/StatusBadge'
 import RowText from '../RowText/RowText'
 import { SpacerAtom } from '../../atoms/Spacer/Spacer'
 
-const ClientDiscountCard = ({item}: {item: []}) => {
+type ClientDiscount = {
+  name?: string;
+  status?: string;
+  discountType?: string;
+  discountValue?: string | number;
+};
+
+const ClientDiscountCard: React.FC<{ item: ClientDiscount }> = ({ item }) => {
   const {images:{components:{clintImage}}} = Assets
   console.log("item",item);
   
@@ -22,12 +29,12 @@ const ClientDiscountCard = ({item}: {item: []}) => {
         <Image source={clintImage} style={styles.clientImage} />
         <TextAtom variant='subtitle'>{item.name}</TextAtom>
         </View>
-        <StatusBadge status={item.status} />
+        <StatusBadge status={item.status as any} />
       </RowView>
       <SpacerAtom height={hp(24)} />
       <Separator  />
       <SpacerAtom height={hp(16)} />
-      <RowText txt1={item.discountType} txt2={item.discountValue}/>
+      <RowText txt1={item.discountType} txt2={String(item.discountValue ?? '')} />
      </CardAtom>
   )
 }

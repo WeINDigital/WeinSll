@@ -23,7 +23,7 @@ const ConfirmInvoice = () => {
         //  disabled={items.length === 0 || totalAmount === '' }
         //  loading={false}
        >
- <ReviewInvoiceTemplate
+      <ReviewInvoiceTemplate
         items={items}
         clientNameData={clientNameData}
         paymentTypeData={paymentTypeData}

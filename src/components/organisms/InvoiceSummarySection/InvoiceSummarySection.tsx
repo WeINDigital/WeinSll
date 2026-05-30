@@ -2,7 +2,16 @@ import React from 'react';
 import { View } from 'react-native';
 import LabelValueRow from '../../atoms/LabelValueRow/LabelValueRow';
 
-const InvoiceSummarySection = ({
+interface Props {
+  paymentType?: string;
+  discount?: string | number;
+  total?: string | number;
+  received?: string | number;
+  remaining?: string | number;
+  collectionDate?: string;
+}
+
+const InvoiceSummarySection: React.FC<Props> = ({
   paymentType,
   discount,
   total,

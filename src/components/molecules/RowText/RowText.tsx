@@ -1,13 +1,13 @@
-import { View, Text, TextStyle } from 'react-native'
+import { View, Text, TextStyle, StyleProp } from 'react-native'
 import React from 'react'
 import RowView from '../../atoms/RowView/RowView'
 import { TextAtom } from '../../atoms/Text/Text'
 
 export interface RowTextProps {
-    txt1?: string;
-    txt2?: string;
-    totalAmount?: boolean;
-    txt2Style?: TextStyle;
+  txt1?: string;
+  txt2?: string;
+  totalAmount?: boolean;
+  txt2Style?: StyleProp<TextStyle>;
 }
 
 const RowText: React.FC<RowTextProps> = ({ txt1, txt2, totalAmount, txt2Style }) => {

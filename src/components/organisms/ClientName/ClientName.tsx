@@ -10,15 +10,16 @@ import {
 import { hp } from '../../../utils/dimensions';
 
 interface Props extends RowTextProps {
-  item: { value: string; text: string }[];
+  item?: { value: string; text: string }[];
 }
 
 const ClientName = ({ item }: Props) => {
+  const list = item || [];
   return (
-    <View style={{ paddingHorizontal: 16, marginBottom: 16,gap: hp(16) }}>
-      {item.map((client, index) => (
+    <View style={{ paddingHorizontal: 16, marginBottom: 16, gap: hp(16) }}>
+      {list.map((client, index) => (
         <RowText
-          key={index}
+          key={client.value ?? index}
           txt1={client.text}
           txt2={getClientFormattedValue(client.text, client.value)}
           txt2Style={[getClientValueStyle(client.text)]}

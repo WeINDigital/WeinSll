@@ -4,7 +4,7 @@ import { TextAtom } from '../Text/Text';
 
 type Props = {
   label: string;
-  value: string;
+  value?: string | number;
   valueColor?: string;
 };
 
@@ -17,7 +17,7 @@ const LabelValueRow: React.FC<Props> = ({
     <View style={styles.row}>
       <TextAtom style={styles.label}>{label}</TextAtom>
       <TextAtom style={[styles.value, { color: valueColor }]}>
-        {value}
+        {value ?? ''}
       </TextAtom>
     </View>
   );

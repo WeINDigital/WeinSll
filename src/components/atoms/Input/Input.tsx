@@ -5,14 +5,11 @@ import {
   StyleSheet,
   ViewStyle,
   TextStyle,
+  TextInputProps,
 } from 'react-native';
 import { fs, hp, sp } from '../../../utils/dimensions';
 
-interface Props {
-  value?: string;
-  onChangeText?: (text: string) => void;
-  placeholder?: string;
-  secureTextEntry?: boolean;
+export interface Props extends TextInputProps {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
   containerStyle?: ViewStyle;

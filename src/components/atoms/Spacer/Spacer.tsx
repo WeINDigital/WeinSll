@@ -9,4 +9,5 @@ interface Props {
 export const SpacerAtom: React.FC<Props> = ({
   height = 0,
   width = 0,
-}) => <View style={{ height, width }} />;
+}) => <View style={{ height, width } as any} />;
+

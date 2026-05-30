@@ -4,12 +4,18 @@ import ItemsSection from '../../organisms/ItemsSection/ItemsSection';
 import ClientName from '../../organisms/ClientName/ClientName';
 import Separator from '../../atoms/Separator';
 
-const ReviewInvoiceTemplate = ({
+interface Props {
+  clientNameData?: { id?: string; value: string; text: string }[];
+  paymentTypeData?: { id?: string; value: string; text: string }[];
+  amountData?: { id?: string; value: string; text: string }[];
+  items?: any[];
+}
+
+const ReviewInvoiceTemplate: React.FC<Props> = ({
   clientNameData,
   paymentTypeData,
   amountData,
   items,
-}: {
 }) => {
   return (
     <ScrollView>

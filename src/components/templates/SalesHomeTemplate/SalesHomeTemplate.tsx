@@ -15,7 +15,7 @@ export const SalesHomeTemplate: React.FC<Props> = ({
   dashboardData,
   renderCard,
 }) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   return (
     <HomeHeader userName='Moataz mahdi' >
       <SectionList

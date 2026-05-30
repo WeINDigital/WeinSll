@@ -18,12 +18,12 @@ type Item = {
 };
 
 type Props = {
-  items: Item[];
-  onDelete: (id: string) => void;
+  items?: Item[];
+  onDelete?: (id?: string) => void;
   notCamera?: boolean;
 };
 
-const ItemsSection: React.FC<Props> = ({ items, onDelete, notCamera }) => {
+const ItemsSection: React.FC<Props> = ({ items = [], onDelete = () => {}, notCamera }) => {
   const navigation = useNavigation<any>();
   return (
     <View>

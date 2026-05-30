@@ -6,7 +6,17 @@ import { InputWithIcon } from '../../molecules/InputWithIcon/InputWithIcon';
 import { Assets } from '../../../assets';
 import DatePickerField from '../../molecules/DatePickerField/DatePickerField';
 
-const TotalAmountSection = ({
+interface Props {
+  paymentType?: string;
+  totalAmount?: string | number;
+  setTotalAmount?: (v: string) => void;
+  receivedAmount?: string | number;
+  setReceivedAmount?: (v: string) => void;
+  collectionDate?: Date | string;
+  setCollectionDate?: (v: any) => void;
+}
+
+const TotalAmountSection: React.FC<Props> = ({
   paymentType,
   totalAmount,
   setTotalAmount,
@@ -68,10 +78,10 @@ const TotalAmountSection = ({
           </View>
 
           <DatePickerField
-  label="Collection Date"
-  value={collectionDate}
-  onChange={setCollectionDate}
-/>
+            label="Collection Date"
+            value={collectionDate}
+            onChange={(d) => setCollectionDate?.(d as any)}
+          />
 
         </>
       )}

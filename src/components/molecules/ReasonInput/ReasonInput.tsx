@@ -6,10 +6,10 @@ import { SpacerAtom } from '../../atoms/Spacer/Spacer';
 import { hp } from '../../../utils/dimensions';
 
 interface Props {
-  value: string;
-  onChangeText: (text: string) => void;
-    label?: string;
-    title?: string;
+  value?: string;
+  onChangeText?: (text: string) => void;
+  label?: string;
+  title?: string;
 }
 
 const ReasonInput: React.FC<Props> = ({

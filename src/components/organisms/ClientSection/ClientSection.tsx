@@ -3,8 +3,13 @@ import React from 'react'
 import SelectClientSheet from '../SelectClientSheet/SelectClientSheet'
 import { wp } from '../../../utils/dimensions';
 
-const ClientSection = ({data, title}) => {
-        const [client, setClient] = React.useState('');
+interface Props {
+  data?: any[];
+  title?: string;
+}
+
+const ClientSection: React.FC<Props> = ({ data = [], title }) => {
+  const [client, setClient] = React.useState('');
     
   return (
     <View style={{flex:1,paddingHorizontal: title ? 0 :  wp(16)}}>

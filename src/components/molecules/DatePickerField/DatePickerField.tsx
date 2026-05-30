@@ -8,8 +8,8 @@ import { hp } from '../../../utils/dimensions';
 
 type Props = {
   label: string;
-  value: Date;
-  onChange: (date: Date) => void;
+  value?: Date | string;
+  onChange?: (date: Date | string) => void;
 };
 
 const DatePickerField: React.FC<Props> = ({
@@ -31,13 +31,13 @@ const DatePickerField: React.FC<Props> = ({
 
       {show && (
         <DateTimePicker
-          value={value}
+          value={value instanceof Date ? value : new Date(value ?? Date.now())}
           mode="date"
           display="default"
           minimumDate={new Date()}
           onChange={(event, selectedDate) => {
             setShow(false);
-            if (selectedDate) onChange(selectedDate);
+            if (selectedDate) onChange?.(selectedDate);
           }}
         />
       )}

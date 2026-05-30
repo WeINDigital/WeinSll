@@ -6,10 +6,19 @@ import PaymentTypeSection from '../../organisms/PaymentTypeSection/PaymentTypeSe
 import DiscountAmountSection from '../../organisms/DiscountAmount/DiscountAmount';
 
 interface Props {
-  paymentType: 'cash' | 'items' | 'other';
-  onChangePayment: (v: 'cash' | 'items' | 'other') => void;
-  items: [];
-  onDelete: () => void;
+  paymentType?: string;
+  onChangePayment?: (v: any) => void;
+  items?: any[];
+  onDelete?: () => void;
+  totalAmount?: string | number;
+  setTotalAmount?: (v: any) => void;
+  receivedAmount?: string | number;
+  setReceivedAmount?: (v: any) => void;
+  collectionDate?: Date | string;
+  setCollectionDate?: (v: any) => void;
+  reason?: string;
+  setReason?: (v: any) => void;
+  setItems?: (items: any[]) => void;
 }
 
 const CreateDiscountTemplate: React.FC<Props> = ({
@@ -22,15 +31,15 @@ const CreateDiscountTemplate: React.FC<Props> = ({
   collectionDate,
   setCollectionDate,
   reason,
-  setReason
+  setReason,
 }) => {
   return (
     <ScrollView>
       <ClientSection />
 
       <PaymentTypeSection
-        value={paymentType}
-        onChange={onChangePayment}
+        value={paymentType as any}
+        onChange={onChangePayment as any}
         title="Discount Type"
         other={true}
       />

@@ -71,7 +71,7 @@ const {
 ];
 
 const HomeMenu = ({ onClose,onLogOut}: { onClose: () => void,onLogOut :()=>void }) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
  const handleNavigate = (screen: string) => {
     navigation.navigate(screen);
@@ -82,7 +82,7 @@ const HomeMenu = ({ onClose,onLogOut}: { onClose: () => void,onLogOut :()=>void 
     <View style={{ flex: 1 }}>
       {menuItems.map((item, i) => (
         <TouchableOpacity
-          key={i}
+          key={item.title ?? i}
           onPress={() => handleNavigate(item.screenName ? item.screenName : '')}
           style={{
             flexDirection: 'row',

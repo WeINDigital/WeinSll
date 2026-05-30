@@ -8,13 +8,13 @@ type Item = {
   id: string;
   name: string;
   price: number;
-  barcode: string;
+  barcode?: string;
 };
 
 const CreateInvoice = () => {
   const route = useRoute<any>();
   const barcode = route?.params?.barcode;
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const [paymentType, setPaymentType] = useState<'cash' | 'credit'>('cash');
 
   const [items, setItems] = useState<Item[]>([]);

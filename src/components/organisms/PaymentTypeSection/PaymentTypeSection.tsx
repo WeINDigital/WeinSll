@@ -5,7 +5,16 @@ import { TextAtom } from '../../atoms/Text/Text';
 import { hp, wp } from '../../../utils/dimensions';
 import { SpacerAtom } from '../../atoms/Spacer/Spacer';
 
-const PaymentTypeSection = ({ value, onChange, title, other }) => {
+type PaymentValue = 'cash' | 'credit' | 'items' | 'Other' | 'other';
+
+interface Props {
+  value?: PaymentValue;
+  onChange?: (v: PaymentValue) => void;
+  title?: string;
+  other?: boolean;
+}
+
+const PaymentTypeSection: React.FC<Props> = ({ value, onChange, title, other }) => {
   return (
     <View style={{ marginTop: hp(16),paddingHorizontal: wp(16) }}>
       <TextAtom>{ title ?? `Payment Type`}</TextAtom>
@@ -13,21 +22,23 @@ const PaymentTypeSection = ({ value, onChange, title, other }) => {
       <RadioItem
         label="Cash"
         selected={value === 'cash'}
-        onPress={() => onChange('cash')}
+        onPress={() => onChange?.('cash')}
       />
 
       <RadioItem
-        label= {other ? "Items": "Credit"}
+        label={other ? 'Items' : 'Credit'}
         selected={value === 'credit' || value === 'items'}
-        onPress={() => { other ? onChange('items') : onChange('credit')}}
+        onPress={() => { other ? onChange?.('items') : onChange?.('credit') }}
       />
- {
-  other && <RadioItem
-  label="Other"
-  selected={value === 'Other'}
-  onPress={() => onChange('Other')}
-/>
- }
+{
+  other && (
+    <RadioItem
+      label="Other"
+      selected={value === 'Other'}
+      onPress={() => onChange?.('Other')}
+    />
+  )
+}
     </View>
   );
 };

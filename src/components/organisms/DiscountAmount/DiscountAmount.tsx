@@ -14,13 +14,22 @@ import ClientSection from '../ClientSection/ClientSection';
   { id: '4', name: 'Item 4' },
   { id: '5', name: 'Item 5' },
 ];
-const DiscountAmountSection = ({
+interface Props {
+  paymentType?: string;
+  totalAmount?: string | number;
+  setTotalAmount?: (v: string) => void;
+  receivedAmount?: string | number;
+  reason?: string;
+  setReason?: (v: string) => void;
+}
+
+const DiscountAmountSection: React.FC<Props> = ({
   paymentType,
   totalAmount,
   setTotalAmount,
   receivedAmount,
   reason,
-  setReason
+  setReason,
 }) => {
   const remaining = Number(totalAmount || 0) - Number(receivedAmount || 0);
   const {

@@ -9,10 +9,17 @@ import TotalAmountSection from '../../organisms/TotalAmountSection/TotalAmountSe
 import DiscountSection from '../../organisms/DiscountSection/DiscountSection';
 
 interface Props {
-  paymentType: 'cash' | 'credit';
-  onChangePayment: (v: 'cash' | 'credit') => void;
-  items: [];
-  onDelete: () => void;
+  paymentType?: string;
+  onChangePayment?: (v: any) => void;
+  items?: any[];
+  onDelete?: () => void;
+  setItems?: React.Dispatch<React.SetStateAction<any[]>>;
+  totalAmount?: string | number;
+  setTotalAmount?: (v: any) => void;
+  receivedAmount?: string | number;
+  setReceivedAmount?: (v: any) => void;
+  collectionDate?: Date | string;
+  setCollectionDate?: (v: any) => void;
 }
 
 const CreateInvoiceTemplate: React.FC<Props> = ({
@@ -20,6 +27,7 @@ const CreateInvoiceTemplate: React.FC<Props> = ({
   onChangePayment,
   items,
   onDelete,
+  setItems,
   totalAmount,
   setTotalAmount,
   receivedAmount,
@@ -36,7 +44,7 @@ const CreateInvoiceTemplate: React.FC<Props> = ({
       <ItemsSection items={items} onDelete={onDelete} />
       <SpacerAtom height={hp(16)} />
 
-      <PaymentTypeSection value={paymentType} onChange={onChangePayment} />
+      <PaymentTypeSection value={paymentType as any} onChange={onChangePayment as any} />
      <DiscountSection/>
 
 <View style={{ paddingHorizontal: wp(16),paddingBottom:hp(160)}}>

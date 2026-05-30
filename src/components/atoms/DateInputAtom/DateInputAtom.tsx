@@ -4,16 +4,15 @@ import { TextAtom } from '../Text/Text';
 import { sp, wp } from '../../../utils/dimensions';
 
 type Props = {
-  value: Date;
-  onPress: () => void;
+  value?: Date | string;
+  onPress?: () => void;
 };
 
 const DateInputAtom: React.FC<Props> = ({
   value,
   onPress,
 }) => {
-  const safeDate =
-    value instanceof Date ? value : new Date();
+  const safeDate = value instanceof Date ? value : new Date(value ?? Date.now());
 
   return (
     <Pressable style={styles.container} onPress={onPress}>

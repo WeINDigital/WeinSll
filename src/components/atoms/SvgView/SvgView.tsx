@@ -11,7 +11,7 @@ export const SvgView: React.FC<SvgViewProps> = ({
   ...svgProps
 }) => {
   return (
-    <View style={[styles.container, { width, height }]}>
+    <View style={[styles.container, { width, height } as any]}> 
       <SvgComponent
         {...svgProps}
         width="100%"

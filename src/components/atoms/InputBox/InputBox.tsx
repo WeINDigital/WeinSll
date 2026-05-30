@@ -2,7 +2,11 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextAtom } from '../Text/Text';
 
-const InputBox = ({ value }) => {
+interface InputBoxProps {
+  value?: string;
+}
+
+const InputBox: React.FC<InputBoxProps> = ({ value }) => {
   return (
     <View style={styles.container}>
       <TextAtom>{value}</TextAtom>

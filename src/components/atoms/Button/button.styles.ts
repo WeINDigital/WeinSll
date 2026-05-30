@@ -38,6 +38,12 @@ export const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
 
+  icon: {
+    paddingHorizontal: sp(8),
+    width: hp(40),
+    justifyContent: 'center',
+  },
+
   disabled: {
     opacity: 0.5,
   },

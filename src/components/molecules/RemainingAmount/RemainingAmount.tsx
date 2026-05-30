@@ -2,7 +2,11 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TextAtom } from '../../atoms/Text/Text';
 
-const RemainingAmount = ({ amount }) => {
+interface Props {
+  amount: string | number;
+}
+
+const RemainingAmount: React.FC<Props> = ({ amount }) => {
   return (
     <View style={styles.box}>
       <TextAtom>
