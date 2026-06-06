@@ -4,6 +4,7 @@ export type DiscountRequest = {
   items?: any[];
   totalAmount?: number | string;
   reason?: string;
+  otherReason?: string;
 };
 
 export type DiscountResponse = {
@@ -23,6 +24,7 @@ export const requestDiscount = async (
   const numericTotal = Number(payload.totalAmount || 0);
   let status: DiscountResponse['status'] = 'In Progress';
   if (!payload.reason || payload.reason.trim() === '') status = 'Rejected';
+  else if (payload.paymentType === 'Other' && (!payload.otherReason || payload.otherReason.trim() === '')) status = 'Rejected';
   else if (numericTotal > 1000) status = 'Approved';
 
   return {

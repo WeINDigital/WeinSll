@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import React from 'react';
 import ScanItemsSection from '../ScanItemsSection/ScanItemsSection';
 import ItemRow from '../../molecules/ItemRow/ItemRow';
@@ -21,10 +21,18 @@ type Props = {
   items?: Item[];
   onDelete?: (id?: string) => void;
   notCamera?: boolean;
+  selectedIds?: string[];
+  setSelectedIds?: (ids: string[]) => void;
 };
 
-const ItemsSection: React.FC<Props> = ({ items = [], onDelete = () => {}, notCamera }) => {
+const ItemsSection: React.FC<Props> = ({ items = [], onDelete = () => {}, notCamera, selectedIds = [], setSelectedIds }) => {
   const navigation = useNavigation<any>();
+  const toggle = (id?: string) => {
+    if (!id) return;
+    const exists = selectedIds.includes(id);
+    const next = exists ? selectedIds.filter(s => s !== id) : [...selectedIds, id];
+    setSelectedIds?.(next);
+  };
   return (
     <View>
       {notCamera ? null : <ScanItemsSection text="Items" />}
@@ -50,19 +58,24 @@ const ItemsSection: React.FC<Props> = ({ items = [], onDelete = () => {}, notCam
           </View>
 
           <View style={{ paddingHorizontal: wp(16) }}>
-            {items.map((item, index) => (
-              <React.Fragment key={item.id}>
-                <ItemRow
-                  index={index}
-                  name={item.name}
-                  price={item.price}
-                  onDelete={() => onDelete(item?.id)}
-                  removeItem={notCamera}
-                />
+            {items.map((item, index) => {
+              const selected = selectedIds.includes(item.id);
+              return (
+                <React.Fragment key={item.id}>
+                  <Pressable onPress={() => toggle(item.id)} style={{ backgroundColor: selected ? '#EEF2FF' : 'transparent', padding: 4, borderRadius: 8 }}>
+                    <ItemRow
+                      index={index}
+                      name={item.name}
+                      price={item.price}
+                      onDelete={() => onDelete(item?.id)}
+                      removeItem={notCamera}
+                    />
+                  </Pressable>
 
-                {index !== items.length - 1 && <Separator mt={hp(8)} />}
-              </React.Fragment>
-            ))}
+                  {index !== items.length - 1 && <Separator mt={hp(8)} />}
+                </React.Fragment>
+              );
+            })}
             {notCamera ? null : (
               <AddNewItem
                 onPress={() => navigation.navigate(Routes.CAMERA_SCREEN)}

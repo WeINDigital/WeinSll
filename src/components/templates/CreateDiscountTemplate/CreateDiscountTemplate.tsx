@@ -4,38 +4,48 @@ import ClientSection from '../../organisms/ClientSection/ClientSection';
 import { hp, wp } from '../../../utils/dimensions';
 import PaymentTypeSection from '../../organisms/PaymentTypeSection/PaymentTypeSection';
 import DiscountAmountSection from '../../organisms/DiscountAmount/DiscountAmount';
+import { SelectableItem } from '../../organisms/MultiSelectItemSheet/MultiSelectItemSheet';
+
+const CLIENT_DATA = [
+  { id: '1', name: 'Client One' },
+  { id: '2', name: 'Client Two' },
+  { id: '3', name: 'Client Three' },
+];
 
 interface Props {
   paymentType?: string;
   onChangePayment?: (v: any) => void;
-  items?: any[];
-  onDelete?: () => void;
+  onClientChange?: (clientId: string) => void;
+  availableItems?: SelectableItem[];
+  selectedItems?: SelectableItem[];
+  setSelectedItems?: (items: SelectableItem[]) => void;
   totalAmount?: string | number;
   setTotalAmount?: (v: any) => void;
   receivedAmount?: string | number;
-  setReceivedAmount?: (v: any) => void;
-  collectionDate?: Date | string;
-  setCollectionDate?: (v: any) => void;
   reason?: string;
   setReason?: (v: any) => void;
-  setItems?: (items: any[]) => void;
+  otherReason?: string;
+  setOtherReason?: (v: any) => void;
 }
 
 const CreateDiscountTemplate: React.FC<Props> = ({
   paymentType,
   onChangePayment,
+  onClientChange,
+  availableItems,
+  selectedItems,
+  setSelectedItems,
   totalAmount,
   setTotalAmount,
   receivedAmount,
-  setReceivedAmount,
-  collectionDate,
-  setCollectionDate,
   reason,
   setReason,
+  otherReason,
+  setOtherReason,
 }) => {
   return (
     <ScrollView>
-      <ClientSection />
+      <ClientSection data={CLIENT_DATA} onSelect={onClientChange} />
 
       <PaymentTypeSection
         value={paymentType as any}
@@ -52,6 +62,11 @@ const CreateDiscountTemplate: React.FC<Props> = ({
           receivedAmount={receivedAmount}
           reason={reason}
           setReason={setReason}
+          availableItems={availableItems}
+          selectedItems={selectedItems}
+          setSelectedItems={setSelectedItems}
+          otherReason={otherReason}
+          setOtherReason={setOtherReason}
         />
       </View>
     </ScrollView>

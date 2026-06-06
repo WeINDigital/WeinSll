@@ -1,65 +1,43 @@
-import { View, Text } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import CreateDiscountTemplate from '../../components/templates/CreateDiscountTemplate/CreateDiscountTemplate';
 import { requestDiscount } from '../../services/discounts';
 import { Routes } from '../../navigation/routes';
+import { SelectableItem } from '../../components/organisms/MultiSelectItemSheet/MultiSelectItemSheet';
 
-type Item = {
-  id: string;
-  name: string;
-  price: number;
-  barcode?: string;
-};
+const AVAILABLE_ITEMS: SelectableItem[] = [
+  { id: '1', name: 'Chipsy', price: 132, Discount: 32 },
+  { id: '2', name: 'Pepsi', price: 132, Discount: 32 },
+  { id: '3', name: 'Sprite', price: 80, Discount: 10 },
+];
 
 const CreateDiscounts = () => {
-  const route = useRoute<any>();
-  const barcode = route?.params?.barcode;
   const navigation = useNavigation();
-  const [paymentType, setPaymentType] = useState<'cash' | 'credit'>('cash');
-
-  const [items, setItems] = useState<Item[]>([]);
+  const [paymentType, setPaymentType] = useState<'cash' | 'items' | 'Other'>('cash');
+  const [clientId, setClientId] = useState('');
+  const [selectedItems, setSelectedItems] = useState<SelectableItem[]>([]);
   const [totalAmount, setTotalAmount] = useState('');
   const [reason, setReason] = useState('');
-  const [receivedAmount, setReceivedAmount] = useState('');
-  const [collectionDate, setCollectionDate] = useState<Date>(new Date());
+  const [otherReason, setOtherReason] = useState('');
 
-  useEffect(() => {
-    setItems([
-      { id: '1', name: 'Chipsy', price: 123 },
-      { id: '2', name: 'Chipsy', price: 123 },
-      { id: '3', name: 'Chipsy', price: 123 },
-    ]);
-    if (!barcode) return;
-
-    const product = {
-      name: 'Chipsy',
-      price: 132,
-    };
-
-    setItems(prev => [
-      ...prev,
-      {
-        id: Date.now().toString(),
-        name: product.name,
-        price: product.price,
-        barcode,
-      },
-    ]);
-  }, [barcode]);
+  const isDisabled = (() => {
+    if (!clientId) return true;
+    if (paymentType === 'cash') return !totalAmount || !reason;
+    if (paymentType === 'items') return selectedItems.length === 0 || !reason;
+    if (paymentType === 'Other') return !otherReason;
+    return true;
+  })();
 
   const onReview = async () => {
     const payload = {
-      clientId: 'unknown',
+      clientId,
       paymentType,
-      items,
+      items: selectedItems,
       totalAmount,
-      receivedAmount,
-      collectionDate,
       reason,
+      otherReason,
     };
-
     try {
       const res = await requestDiscount(payload as any);
       (navigation as any).navigate(Routes.DISCOUNT_DETAILS as any, { discount: res } as any);
@@ -67,29 +45,33 @@ const CreateDiscounts = () => {
       console.warn('discount request failed', err);
     }
   };
+
   return (
     <AuthTemplate
       top
       title="Request discount"
       bottomTitle="Request"
       onPress={onReview}
-      //   disabled={items.length === 0 || totalAmount === '' }
+      disabled={isDisabled}
       loading={false}
     >
       <CreateDiscountTemplate
-        items={items}
-        setItems={setItems}
         paymentType={paymentType}
-        onChangePayment={setPaymentType}
+        onChangePayment={type => {
+          setPaymentType(type);
+          setSelectedItems([]);
+          setTotalAmount('');
+        }}
+        onClientChange={setClientId}
+        availableItems={AVAILABLE_ITEMS}
+        selectedItems={selectedItems}
+        setSelectedItems={setSelectedItems}
         totalAmount={totalAmount}
         setTotalAmount={setTotalAmount}
-        receivedAmount={receivedAmount}
-        setReceivedAmount={setReceivedAmount}
-        onDelete={() => {}}
-        collectionDate={collectionDate}
-        setCollectionDate={setCollectionDate}
         reason={reason}
         setReason={setReason}
+        otherReason={otherReason}
+        setOtherReason={setOtherReason}
       />
     </AuthTemplate>
   );
