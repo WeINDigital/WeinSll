@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import VisitForumTemplate from '@src/components/templates/VisitForumTemplate/VisitForumTemplate';
-import { VisitItem } from '@src/components/molecules/VisitCard/VisitCard';
+import { VisitItem } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
 import { Routes } from '@src/navigation/routes';
 
 const MOCK_VISITS: VisitItem[] = [

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CollectionsTemplate from '@src/components/templates/CollectionsTemplate/CollectionsTemplate';
-import { CollectionItem } from '@src/components/molecules/CollectionCard/CollectionCard';
+import { CollectionItem } from '@src/components/templates/CollectionsTemplate/CollectionsTemplate';
 
 const MOCK_COLLECTIONS: CollectionItem[] = [
   { id: '1', clientName: 'Youssef Bsheer', location: 'Maadi, Cairo', phone: '01000000001', date: '12/12/2021' },

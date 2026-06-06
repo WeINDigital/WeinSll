@@ -2,6 +2,7 @@ export { default as AddNewItem } from '@src/components/molecules/AddNewItem/AddN
 export { default as BottomContainer } from '@src/components/molecules/BottomContainer/BottomContainer';
 export { default as CameraSection } from '@src/components/molecules/CameraSection/CameraSection';
 export { default as ClientCard, type Client } from '@src/components/molecules/ClientCard/ClientCard';
+export { default as PersonCard, type PersonCardItem } from '@src/components/molecules/PersonCard/PersonCard';
 export { default as ClientDiscountCard } from '@src/components/molecules/ClientDiscountCard/ClientDiscountCard';
 export { default as DatePickerField } from '@src/components/molecules/DatePickerField/DatePickerField';
 export { default as DiscountSelect } from '@src/components/molecules/DiscountSelect/DiscountSelect';
@@ -23,6 +24,4 @@ export { default as SheetContainer } from '@src/components/molecules/SheetContai
 export { StatCard } from '@src/components/molecules/StatCard/StatCard';
 export { SummaryRow } from '@src/components/molecules/SummaryRow/SummaryRow';
 export { default as ReceiptCard, type ReceiptItem } from '@src/components/molecules/ReceiptCard/ReceiptCard';
-export { default as CollectionCard, type CollectionItem } from '@src/components/molecules/CollectionCard/CollectionCard';
 export { default as InventoryCard, type InventoryEntry } from '@src/components/molecules/InventoryCard/InventoryCard';
-export { default as VisitCard, type VisitItem } from '@src/components/molecules/VisitCard/VisitCard';

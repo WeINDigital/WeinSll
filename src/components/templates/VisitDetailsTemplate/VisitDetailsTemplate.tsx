@@ -5,7 +5,15 @@ import { SpacerAtom, TextAtom } from '@src/components';
 import SvgView from '@src/components/atoms/SvgView/SvgView';
 import { Assets } from '@src/assets';
 import { hp, sp, wp } from '@src/utils/dimensions';
-import { VisitItem } from '@src/components/molecules/VisitCard/VisitCard';
+export type VisitItem = {
+  id: string;
+  clientName: string;
+  location: string;
+  date: string;
+  reasons: string;
+  outcome: string;
+  visitDate: string;
+};
 
 interface Props {
   visit: VisitItem;

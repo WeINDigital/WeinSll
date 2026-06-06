@@ -2,11 +2,19 @@ import React, { useState } from 'react';
 import { FlatList } from 'react-native';
 import HomeHeader from '@src/components/molecules/HomeHeader/HomeHeader';
 import { InputWithIcon } from '@src/components/molecules/InputWithIcon/InputWithIcon';
-import CollectionCard, { CollectionItem } from '@src/components/molecules/CollectionCard/CollectionCard';
+import PersonCard from '@src/components/molecules/PersonCard/PersonCard';
 import SetNewDateModal from '@src/components/organisms/SetNewDateModal/SetNewDateModal';
 import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 import { Assets } from '@src/assets';
 import { hp } from '@src/utils/dimensions';
+
+export type CollectionItem = {
+  id: string;
+  clientName: string;
+  location: string;
+  phone: string;
+  date: string;
+};
 
 interface Props {
   data: CollectionItem[];
@@ -41,7 +49,11 @@ const CollectionsTemplate: React.FC<Props> = ({
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <CollectionCard item={item} onNewDate={(id) => setSelectedId(id)} />
+          <PersonCard
+            item={{ id: item.id, name: item.clientName, subtitle: item.location, date: item.date, phone: item.phone }}
+            actionLabel="New Date"
+            onAction={(id) => setSelectedId(id)}
+          />
         )}
         showsVerticalScrollIndicator={false}
       />

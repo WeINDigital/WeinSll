@@ -1,9 +1,10 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import HomeHeader from '@src/components/molecules/HomeHeader/HomeHeader';
-import VisitCard, { VisitItem } from '@src/components/molecules/VisitCard/VisitCard';
+import PersonCard from '@src/components/molecules/PersonCard/PersonCard';
 import { BottomContainer } from '@src/components';
 import { hp } from '@src/utils/dimensions';
+import { VisitItem } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
 
 interface Props {
   data: VisitItem[];
@@ -18,7 +19,10 @@ const VisitForumTemplate: React.FC<Props> = ({ data, onCardPress, onAddVisit }) 
         data={data}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <VisitCard item={item} onPress={onCardPress} />
+          <PersonCard
+            item={{ id: item.id, name: item.clientName, subtitle: item.location, date: item.date }}
+            onPress={() => onCardPress(item)}
+          />
         )}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: hp(100) }}

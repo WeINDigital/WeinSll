@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRoute } from '@react-navigation/native';
 import VisitDetailsTemplate from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
-import { VisitItem } from '@src/components/molecules/VisitCard/VisitCard';
+import { VisitItem } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
 
 const MOCK_VISIT: VisitItem = {
   id: '1',

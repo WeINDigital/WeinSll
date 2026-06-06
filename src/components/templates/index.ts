@@ -11,8 +11,8 @@ export { default as ReviewInvoiceTemplate } from '@src/components/templates/Revi
 export { SalesHomeTemplate } from '@src/components/templates/SalesHomeTemplate/SalesHomeTemplate';
 export { default as ReceiptDetailsTemplate, type ReceiptDetail } from '@src/components/templates/ReceiptDetailsTemplate/ReceiptDetailsTemplate';
 export { default as ReceiptsCenterTemplate } from '@src/components/templates/ReceiptsCenterTemplate/ReceiptsCenterTemplate';
-export { default as CollectionsTemplate } from '@src/components/templates/CollectionsTemplate/CollectionsTemplate';
+export { default as CollectionsTemplate, type CollectionItem } from '@src/components/templates/CollectionsTemplate/CollectionsTemplate';
 export { default as InventoryTemplate } from '@src/components/templates/InventoryTemplate/InventoryTemplate';
 export { default as VisitForumTemplate } from '@src/components/templates/VisitForumTemplate/VisitForumTemplate';
-export { default as VisitDetailsTemplate } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
+export { default as VisitDetailsTemplate, type VisitItem } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
 export { default as AddVisitTemplate } from '@src/components/templates/AddVisitTemplate/AddVisitTemplate';
