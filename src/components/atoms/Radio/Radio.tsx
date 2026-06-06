@@ -12,7 +12,7 @@ export const RadioAtom: React.FC<Props> = ({
   onPress,
 }) => {
   return (
-    <Pressable onPress={onPress} style={styles.outer}>
+    <Pressable onPress={onPress} style={[styles.outer,{borderColor:selected?'#7C5CFC':'#D0D5DD'}]}>
       {selected && <View style={styles.inner} />}
     </Pressable>
   );
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     height: wp(20),
     borderRadius: sp(10),
     borderWidth: sp(2),
-    borderColor: '#7C5CFC',
+    // borderColor: '#7C5CFC',
     alignItems: 'center',
     justifyContent: 'center',
   },

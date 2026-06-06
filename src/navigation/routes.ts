@@ -17,4 +17,11 @@ export const Routes = {
   ADD_CLIENT: 'AddClient',
   EDIT_CLIENT: 'EditClient',
   CLIENT_DETAILS: 'ClientDetails',
+  RECEIPTS_CENTER: 'ReceiptsCenter',
+  RECEIPT_DETAILS: 'ReceiptDetails',
+  COLLECTIONS: 'Collections',
+  INVENTORY: 'Inventory',
+  VISIT_FORUM: 'VisitForum',
+  VISIT_DETAILS: 'VisitDetails',
+  ADD_VISIT: 'AddVisit',
 };

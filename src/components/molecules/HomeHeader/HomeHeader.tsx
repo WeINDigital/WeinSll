@@ -77,8 +77,8 @@ const HomeHeader: React.FC<Props> = ({ children, userName, badge }) => {
             {userName}
           </Text>
           {badge !== undefined && (
-            <View style={{ backgroundColor: '#7F56D9', borderRadius: sp(12), paddingHorizontal: sp(8), paddingVertical: sp(2) }}>
-              <Text style={{ color: 'white', fontSize: 12, fontWeight: '600' }}>{badge}</Text>
+            <View style={{ backgroundColor: '#F9F5FF', borderRadius: sp(12), paddingHorizontal: sp(8), paddingVertical: sp(2),width: wp(24),alignItems:'center',justifyContent:'center' ,height: hp(24)}}>
+              <Text style={{ color: '#6941C6', fontSize: 12, fontWeight: '600' }}>{badge}</Text>
             </View>
           )}
         </View>

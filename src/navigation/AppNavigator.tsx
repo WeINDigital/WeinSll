@@ -14,6 +14,13 @@ import DiscountDetails from '@src/screens/discounts/DiscountDetails';
 import AddClient from '@src/screens/common/clients/AddClient';
 import EditClient from '@src/screens/common/clients/EditClient';
 import ClientDetails from '@src/screens/common/clients/ClientDetails';
+import ReceiptsCenter from '@src/screens/receipts/ReceiptsCenter';
+import ReceiptDetails from '@src/screens/receipts/ReceiptDetails';
+import Collections from '@src/screens/collections/Collections';
+import Inventory from '@src/screens/inventory/Inventory';
+import VisitForum from '@src/screens/visitForum/VisitForum';
+import VisitDetails from '@src/screens/visitForum/VisitDetails';
+import AddVisit from '@src/screens/visitForum/AddVisit';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +40,13 @@ export default function AppNavigator() {
       <Stack.Screen name={Routes.ADD_CLIENT} component={AddClient} />
       <Stack.Screen name={Routes.EDIT_CLIENT} component={EditClient} />
       <Stack.Screen name={Routes.CLIENT_DETAILS} component={ClientDetails} />
+      <Stack.Screen name={Routes.RECEIPTS_CENTER} component={ReceiptsCenter} />
+      <Stack.Screen name={Routes.RECEIPT_DETAILS} component={ReceiptDetails} />
+      <Stack.Screen name={Routes.COLLECTIONS} component={Collections} />
+      <Stack.Screen name={Routes.INVENTORY} component={Inventory} />
+      <Stack.Screen name={Routes.VISIT_FORUM} component={VisitForum} />
+      <Stack.Screen name={Routes.VISIT_DETAILS} component={VisitDetails} />
+      <Stack.Screen name={Routes.ADD_VISIT} component={AddVisit} />
     </Stack.Navigator>
   );
 }

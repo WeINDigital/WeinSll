@@ -45,28 +45,28 @@ const {
     icon: fileText,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:'',
+    screenName:Routes.RECEIPTS_CENTER,
   },
   {
     title: 'Collections',
     icon: creditCard,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:'',
+    screenName:Routes.COLLECTIONS,
   },
   {
     title: 'Inventory',
     icon: shoppingBag,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:'',
+    screenName:Routes.INVENTORY,
   },
   {
     title: 'Visit Forum',
     icon: lifeBuoy,
     subTitle:
       'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:'',
+    screenName:Routes.VISIT_FORUM,
   },
 ];
 

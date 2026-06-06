@@ -15,3 +15,5 @@ export { ResetCodeForm } from '@src/components/organisms/ResetCodeForm/ResetCode
 export { default as ScanItemsSection } from '@src/components/organisms/ScanItemsSection/ScanItemsSection';
 export { default as SelectClientSheet } from '@src/components/organisms/SelectClientSheet/SelectClientSheet';
 export { default as TotalAmountSection } from '@src/components/organisms/TotalAmountSection/TotalAmountSection';
+export { default as SetNewDateModal } from '@src/components/organisms/SetNewDateModal/SetNewDateModal';
+export { default as InventoryMessageModal } from '@src/components/organisms/InventoryMessageModal/InventoryMessageModal';

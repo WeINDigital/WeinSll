@@ -1,15 +1,16 @@
 import React from 'react';
-import { View, StyleSheet, ViewProps } from 'react-native';
+import { View, StyleSheet, ViewProps, Pressable } from 'react-native';
 import { sp } from '@src/utils/dimensions';
 
-export const CardAtom: React.FC<ViewProps> = ({
+export const CardAtom: React.FC<ViewProps & { onPress?: () => void }> = ({
   children,
   style,
+  onPress,
 }) => {
   return (
-    <View style={[styles.card, style]}>
+    <Pressable style={[styles.card, style]} onPress={onPress}>
       {children}
-    </View>
+    </Pressable>
   );
 };
 

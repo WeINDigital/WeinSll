@@ -25,8 +25,14 @@ export const InputWithIcon: React.FC<Props> = ({
 }) => {
   return (
     <View style={{ width: width ? width : '100%' } as any}>
-      <TextAtom variant='subtitle' fw="500">{label}</TextAtom>
-     <SpacerAtom width={"100%"} height={hp(6)}/>
+      {label &&(
+        <>
+        <TextAtom variant='subtitle' fw="500">{label}</TextAtom>
+            <SpacerAtom width={"100%"} height={hp(6)}/>
+        </>
+      )
+      }
+     
       <InputAtom
         {...props}
        {...(icon && {
