@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, wp } from '../../../utils/dimensions';
-import RowText from '../../molecules/RowText/RowText';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, wp } from '@src/utils/dimensions';
+import RowText from '@src/components/molecules/RowText/RowText';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 
 const DiscountDetailsTemplate = ({ discount }: { discount?: any }) => {
   const paymentType: string = discount?.paymentType ?? '';

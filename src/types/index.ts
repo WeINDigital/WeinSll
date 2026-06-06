@@ -1,3 +1,3 @@
-export * from './domain';
-export * from './api';
-export * from './store';
+export * from '@src/types/domain';
+export * from '@src/types/api';
+export * from '@src/types/store';

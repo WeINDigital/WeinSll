@@ -1,10 +1,10 @@
 import React, { JSX } from 'react';
 import { View } from 'react-native';
-import { SectionList } from '../../molecules/SectionList/SectionList';
-import BottomContainer from '../../molecules/BottomContainer/BottomContainer';
-import HomeHeader from '../../molecules/HomeHeader/HomeHeader';
+import { SectionList } from '@src/components/molecules/SectionList/SectionList';
+import BottomContainer from '@src/components/molecules/BottomContainer/BottomContainer';
+import HomeHeader from '@src/components/molecules/HomeHeader/HomeHeader';
 import { useNavigation } from '@react-navigation/native';
-import { Routes } from '../../../navigation/routes';
+import { Routes } from '@src/navigation/routes';
 
 interface Props {
   dashboardData: any[];

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ViewProps } from 'react-native';
-import { sp } from '../../../utils/dimensions';
+import { sp } from '@src/utils/dimensions';
 
 export const CardAtom: React.FC<ViewProps> = ({
   children,

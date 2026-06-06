@@ -1,11 +1,11 @@
 import React, { use } from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import { fs, hp, sp, wp } from '../../../utils/dimensions';
-import SvgView from '../../atoms/SvgView/SvgView';
-import { Assets } from '../../../assets';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { fs, hp, sp, wp } from '@src/utils/dimensions';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
 import { useNavigation } from '@react-navigation/native';
-import StatusBadge from '../../atoms/StatusBadge/StatusBadge';
+import StatusBadge from '@src/components/atoms/StatusBadge/StatusBadge';
 
 
 interface Props {

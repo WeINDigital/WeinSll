@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
-import { sp, wp } from '../../../utils/dimensions';
+import { sp, wp } from '@src/utils/dimensions';
 
 interface Props {
   selected?: boolean;

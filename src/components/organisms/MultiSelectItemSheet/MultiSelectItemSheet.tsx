@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Modal, View, Pressable, FlatList, StyleSheet } from 'react-native';
-import SheetContainer from '../../molecules/SheetContainer/SheetContainer';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, sp, wp } from '../../../utils/dimensions';
+import SheetContainer from '@src/components/molecules/SheetContainer/SheetContainer';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, sp, wp } from '@src/utils/dimensions';
 
 export type SelectableItem = {
   id: string;

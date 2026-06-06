@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { PasswordInput } from '../../molecules/PasswordInput/PasswordInput';
-import { Button } from '../../atoms/Button/Button';
-import { Assets } from '../../../assets';
-import { hp, sp, wp } from '../../../utils/dimensions';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import { PasswordInput } from '@src/components/molecules/PasswordInput/PasswordInput';
+import { Button } from '@src/components/atoms/Button/Button';
+import { Assets } from '@src/assets';
+import { hp, sp, wp } from '@src/utils/dimensions';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 
 interface Props {
   loading?: boolean;

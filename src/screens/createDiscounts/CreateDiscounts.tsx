@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
+import { AuthTemplate, CreateDiscountTemplate, type SelectableItem } from '@src/components';
 import { useNavigation } from '@react-navigation/native';
-import CreateDiscountTemplate from '../../components/templates/CreateDiscountTemplate/CreateDiscountTemplate';
-import { requestDiscount } from '../../services/discounts';
-import { Routes } from '../../navigation/routes';
-import { SelectableItem } from '../../components/organisms/MultiSelectItemSheet/MultiSelectItemSheet';
+import { requestDiscount } from '@src/services/discounts';
+import { Routes } from '@src/navigation/routes';
 
 const AVAILABLE_ITEMS: SelectableItem[] = [
   { id: '1', name: 'Chipsy', price: 132, Discount: 32 },

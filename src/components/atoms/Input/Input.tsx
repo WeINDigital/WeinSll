@@ -7,7 +7,7 @@ import {
   TextStyle,
   TextInputProps,
 } from 'react-native';
-import { fs, hp, sp } from '../../../utils/dimensions';
+import { fs, hp, sp } from '@src/utils/dimensions';
 
 export interface Props extends TextInputProps {
   leftIcon?: React.ReactNode;

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import DiscountsTemplate from '../../components/templates/DiscountsTemplate/DiscountsTemplate'
-import ClientDiscountCard from '../../components/molecules/ClientDiscountCard/ClientDiscountCard'
+import { DiscountsTemplate, ClientDiscountCard } from '@src/components';
 
 const dashboardData = [
     {

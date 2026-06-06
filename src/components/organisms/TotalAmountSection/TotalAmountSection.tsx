@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, sp, wp } from '../../../utils/dimensions';
-import { InputWithIcon } from '../../molecules/InputWithIcon/InputWithIcon';
-import { Assets } from '../../../assets';
-import DatePickerField from '../../molecules/DatePickerField/DatePickerField';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, sp, wp } from '@src/utils/dimensions';
+import { InputWithIcon } from '@src/components/molecules/InputWithIcon/InputWithIcon';
+import { Assets } from '@src/assets';
+import DatePickerField from '@src/components/molecules/DatePickerField/DatePickerField';
 
 interface Props {
   paymentType?: string;

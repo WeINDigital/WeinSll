@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import BottomContainerAtoms from '../../atoms/BottomContainerAtoms/BottomContainerAtoms'
-import { Button } from '../../atoms/Button/Button'
-import { SpacerAtom } from '../../atoms/Spacer/Spacer'
-import { hp } from '../../../utils/dimensions'
+import BottomContainerAtoms from '@src/components/atoms/BottomContainerAtoms/BottomContainerAtoms'
+import { Button } from '@src/components/atoms/Button/Button'
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer'
+import { hp } from '@src/utils/dimensions'
 
 type Props = {
     title: string;

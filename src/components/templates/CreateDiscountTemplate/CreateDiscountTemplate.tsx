@@ -1,10 +1,10 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import ClientSection from '../../organisms/ClientSection/ClientSection';
-import { hp, wp } from '../../../utils/dimensions';
-import PaymentTypeSection from '../../organisms/PaymentTypeSection/PaymentTypeSection';
-import DiscountAmountSection from '../../organisms/DiscountAmount/DiscountAmount';
-import { SelectableItem } from '../../organisms/MultiSelectItemSheet/MultiSelectItemSheet';
+import ClientSection from '@src/components/organisms/ClientSection/ClientSection';
+import { hp, wp } from '@src/utils/dimensions';
+import PaymentTypeSection from '@src/components/organisms/PaymentTypeSection/PaymentTypeSection';
+import DiscountAmountSection from '@src/components/organisms/DiscountAmount/DiscountAmount';
+import { SelectableItem } from '@src/components/organisms/MultiSelectItemSheet/MultiSelectItemSheet';
 
 const CLIENT_DATA = [
   { id: '1', name: 'Client One' },

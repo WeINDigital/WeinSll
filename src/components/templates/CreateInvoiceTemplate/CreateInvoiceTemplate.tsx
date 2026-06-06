@@ -1,12 +1,12 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import ClientSection from '../../organisms/ClientSection/ClientSection';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import { hp, wp } from '../../../utils/dimensions';
-import ItemsSection from '../../organisms/ItemsSection/ItemsSection';
-import PaymentTypeSection from '../../organisms/PaymentTypeSection/PaymentTypeSection';
-import TotalAmountSection from '../../organisms/TotalAmountSection/TotalAmountSection';
-import DiscountSection from '../../organisms/DiscountSection/DiscountSection';
+import ClientSection from '@src/components/organisms/ClientSection/ClientSection';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import { hp, wp } from '@src/utils/dimensions';
+import ItemsSection from '@src/components/organisms/ItemsSection/ItemsSection';
+import PaymentTypeSection from '@src/components/organisms/PaymentTypeSection/PaymentTypeSection';
+import TotalAmountSection from '@src/components/organisms/TotalAmountSection/TotalAmountSection';
+import DiscountSection from '@src/components/organisms/DiscountSection/DiscountSection';
 
 interface Props {
   paymentType?: string;
@@ -21,6 +21,12 @@ interface Props {
   collectionDate?: Date | string;
   setCollectionDate?: (v: any) => void;
 }
+
+const clientsData = [
+  { id: '1', name: 'Client A' },
+  { id: '2', name: 'Client B' },
+  { id: '3', name: 'Client C' },
+];
 
 const CreateInvoiceTemplate: React.FC<Props> = ({
   paymentType,
@@ -39,7 +45,7 @@ const CreateInvoiceTemplate: React.FC<Props> = ({
 
   return (
     <ScrollView>
-      <ClientSection />
+      <ClientSection data={clientsData} />
       <SpacerAtom height={hp(16)} />
       <ItemsSection items={items} onDelete={onDelete} />
       <SpacerAtom height={hp(16)} />

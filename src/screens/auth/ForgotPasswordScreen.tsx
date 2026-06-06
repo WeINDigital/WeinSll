@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
-import { ForgotPasswordForm } from '../../components/organisms/ForgotPasswordForm/ForgotPasswordForm';
+import { AuthTemplate, ForgotPasswordForm } from '@src/components';
 
 export const ForgotPassword = () => {
   const navigation = useNavigation<any>();

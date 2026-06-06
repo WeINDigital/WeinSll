@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { CardAtom } from '../../atoms/Card/Card';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, sp, wp } from '../../../utils/dimensions';
-import { SvgView } from '../../atoms/SvgView/SvgView';
-import { Assets } from '../../../assets';
+import { CardAtom } from '@src/components/atoms/Card/Card';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, sp, wp } from '@src/utils/dimensions';
+import { SvgView } from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
 
 interface Props {
   title: string;

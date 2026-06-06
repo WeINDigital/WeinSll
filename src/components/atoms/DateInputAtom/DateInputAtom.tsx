@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
-import { TextAtom } from '../Text/Text';
-import { sp, wp } from '../../../utils/dimensions';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { sp, wp } from '@src/utils/dimensions';
 
 type Props = {
   value?: Date | string;

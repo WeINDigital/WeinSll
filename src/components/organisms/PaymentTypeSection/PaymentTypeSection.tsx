@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
-import RadioItem from '../../atoms/RadioItem/RadioItem';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, wp } from '../../../utils/dimensions';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import RadioItem from '@src/components/atoms/RadioItem/RadioItem';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, wp } from '@src/utils/dimensions';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 
 type PaymentValue = 'cash' | 'credit' | 'items' | 'Other' | 'other';
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import { InputAtom } from '../../atoms/Input/Input';
+import { InputAtom } from '@src/components/atoms/Input/Input';
 import { View, TextInputProps } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 import Svg from 'react-native-svg';
-import SvgView from '../../atoms/SvgView/SvgView';
-import { hp, wp } from '../../../utils/dimensions';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { hp, wp } from '@src/utils/dimensions';
 
 
 interface Props extends Omit<TextInputProps, 'value' | 'onChangeText'> {

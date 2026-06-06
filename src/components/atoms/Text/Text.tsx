@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text as RNText, TextProps, StyleSheet } from 'react-native';
-import { fs } from '../../../utils/dimensions';
+import { fs } from '@src/utils/dimensions';
 
 type Variant = 'title' | 'subtitle' | 'body' | 'link' | 'caption' | 'error';
 

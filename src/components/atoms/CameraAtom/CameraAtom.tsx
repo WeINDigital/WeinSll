@@ -1,6 +1,6 @@
 import {StyleSheet, Pressable } from 'react-native'
 import React, { ReactNode } from 'react'
-import { hp, sp, wp } from '../../../utils/dimensions'
+import { hp, sp, wp } from '@src/utils/dimensions'
 
 const CameraAtom = ({children,onPress}:{ children: ReactNode,onPress:()=>void }) => {
   return (

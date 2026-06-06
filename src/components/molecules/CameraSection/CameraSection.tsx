@@ -1,10 +1,10 @@
 import { View, StyleSheet } from 'react-native'
 import React from 'react'
-import CameraAtom from '../../atoms/CameraAtom/CameraAtom'
-import SvgView from '../../atoms/SvgView/SvgView'
-import { Assets } from '../../../assets'
-import { hp, wp } from '../../../utils/dimensions'
-import { TextAtom } from '../../atoms/Text/Text'
+import CameraAtom from '@src/components/atoms/CameraAtom/CameraAtom'
+import SvgView from '@src/components/atoms/SvgView/SvgView'
+import { Assets } from '@src/assets'
+import { hp, wp } from '@src/utils/dimensions'
+import { TextAtom } from '@src/components/atoms/Text/Text'
 
 export interface CameraProp  {
 onPress:()=>void

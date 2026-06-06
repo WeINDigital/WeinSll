@@ -6,8 +6,8 @@ import {
   useCodeScanner,
 } from 'react-native-vision-camera';
 import { useNavigation } from '@react-navigation/native';
-import { TextAtom } from '../../components/atoms/Text/Text';
-import { Routes } from '../../navigation/routes';
+import { TextAtom } from '@src/components';
+import { Routes } from '@src/navigation/routes';
 
 const CameraScreen = () => {
   const device = useCameraDevice('back');

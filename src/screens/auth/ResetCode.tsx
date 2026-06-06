@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
-import { ResetCodeForm } from '../../components/organisms/ResetCodeForm/ResetCodeForm';
-import { Routes } from '../../navigation/routes';
+import { AuthTemplate, ResetCodeForm } from '@src/components';
+import { Routes } from '@src/navigation/routes';
 
 
 export const ResetCode = ({ navigation }: any) => {

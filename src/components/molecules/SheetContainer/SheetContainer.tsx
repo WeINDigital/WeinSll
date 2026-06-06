@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import ButtonSheet from '../../atoms/ButtonSheet/ButtonSheet';
-import { SheetContainerProps } from './SheetContainer.type';
-import { TextAtom } from '../../atoms/Text/Text';
-import { fs, hp } from '../../../utils/dimensions';
+import ButtonSheet from '@src/components/atoms/ButtonSheet/ButtonSheet';
+import { SheetContainerProps } from '@src/components/molecules/SheetContainer/SheetContainer.type';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { fs, hp } from '@src/utils/dimensions';
 
 
 

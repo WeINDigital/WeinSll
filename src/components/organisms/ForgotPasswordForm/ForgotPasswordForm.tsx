@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Button } from '../../atoms/Button/Button';
-import { InputWithIcon } from '../../molecules/InputWithIcon/InputWithIcon';
-import { Assets } from '../../../assets';
-import { TextAtom } from '../../atoms/Text/Text';
+import { Button } from '@src/components/atoms/Button/Button';
+import { InputWithIcon } from '@src/components/molecules/InputWithIcon/InputWithIcon';
+import { Assets } from '@src/assets';
+import { TextAtom } from '@src/components/atoms/Text/Text';
 
 interface Props {
   loading?: boolean;

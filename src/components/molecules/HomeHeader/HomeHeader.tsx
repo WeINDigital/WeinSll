@@ -1,18 +1,18 @@
 import { View, Text, TouchableOpacity, Animated } from 'react-native';
 import React, { useContext, useRef } from 'react';
-import { hp, sp, wp } from '../../../utils/dimensions';
-import SvgView from '../../atoms/SvgView/SvgView';
-import { Assets } from '../../../assets';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import Separator from '../../atoms/Separator';
-import HomeMenu from '../../organisms/HomeMenu/HomeMenu';
-import { AuthContext } from '../../../context/AuthContext';
+import { hp, sp, wp } from '@src/utils/dimensions';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
+import Separator from '@src/components/atoms/Separator';
+import HomeMenu from '@src/components/organisms/HomeMenu/HomeMenu';
+import { AuthContext } from '@src/context/AuthContext';
 
 type Props = {
   children: React.ReactNode;
   userName?: string;
+  badge?: number;
 };
-const HomeHeader: React.FC<Props> = ({ children, userName }) => {
+const HomeHeader: React.FC<Props> = ({ children, userName, badge }) => {
   const {
     images: {
       components: { menuIcon,closeIcon },
@@ -72,9 +72,16 @@ const HomeHeader: React.FC<Props> = ({ children, userName }) => {
           paddingHorizontal: sp(16),
         }}
       >
-        <Text style={{ fontSize: 24, fontWeight: '700', color: '#121212' }}>
-          {userName}
-        </Text>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: sp(8) }}>
+          <Text style={{ fontSize: 24, fontWeight: '700', color: '#121212' }}>
+            {userName}
+          </Text>
+          {badge !== undefined && (
+            <View style={{ backgroundColor: '#7F56D9', borderRadius: sp(12), paddingHorizontal: sp(8), paddingVertical: sp(2) }}>
+              <Text style={{ color: 'white', fontSize: 12, fontWeight: '600' }}>{badge}</Text>
+            </View>
+          )}
+        </View>
         <TouchableOpacity onPress={showMenu ? closeMenu : openMenu}>
           <SvgView svgFile={showMenu ? closeIcon :  menuIcon} />
         </TouchableOpacity>

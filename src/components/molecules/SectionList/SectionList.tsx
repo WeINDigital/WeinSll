@@ -1,9 +1,9 @@
 import React, { JSX } from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { ListAtom } from '../../atoms/ListAtom/ListAtom';
-import { TextAtom } from '../../atoms/Text/Text';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import { hp } from '../../../utils/dimensions';
+import { ListAtom } from '@src/components/atoms/ListAtom/ListAtom';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import { hp } from '@src/utils/dimensions';
 
 interface Props {
   title?: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import LabelValueRow from '../../atoms/LabelValueRow/LabelValueRow';
+import LabelValueRow from '@src/components/atoms/LabelValueRow/LabelValueRow';
 
 interface Props {
   paymentType?: string;

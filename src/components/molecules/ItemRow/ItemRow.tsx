@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
-import { TextAtom } from '../../atoms/Text/Text'
-import { hp, sp, wp } from '../../../utils/dimensions';
-import SvgView from '../../atoms/SvgView/SvgView';
-import { Assets } from '../../../assets';
+import { TextAtom } from '@src/components/atoms/Text/Text'
+import { hp, sp, wp } from '@src/utils/dimensions';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
 
 type Props = {
   index: number;

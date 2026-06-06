@@ -14,4 +14,7 @@ export const Routes = {
   CLIENTS:'Clients',
   CREATE_DISCOUNTS:'CreateDiscounts',
   DISCOUNT_DETAILS: 'DiscountDetails',
+  ADD_CLIENT: 'AddClient',
+  EDIT_CLIENT: 'EditClient',
+  CLIENT_DETAILS: 'ClientDetails',
 };

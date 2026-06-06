@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Button } from '../../atoms/Button/Button';
-import { SummaryRow } from '../../molecules/SummaryRow/SummaryRow';
-import { PaymentOption } from '../../molecules/PaymentOption/PaymentOption';
+import { Button } from '@src/components/atoms/Button/Button';
+import { SummaryRow } from '@src/components/molecules/SummaryRow/SummaryRow';
+import { PaymentOption } from '@src/components/molecules/PaymentOption/PaymentOption';
 
 export const CreateInvoiceForm = () => {
   const [payment, setPayment] = useState<'cash' | 'credit'>('cash');

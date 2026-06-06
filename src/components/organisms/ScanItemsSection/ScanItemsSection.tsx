@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import CameraSection from '../../molecules/CameraSection/CameraSection';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, wp } from '../../../utils/dimensions';
+import CameraSection from '@src/components/molecules/CameraSection/CameraSection';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, wp } from '@src/utils/dimensions';
 import { useNavigation } from '@react-navigation/native';
-import { Routes } from '../../../navigation/routes';
+import { Routes } from '@src/navigation/routes';
 
 export interface prop{
     text?:String

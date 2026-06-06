@@ -1,0 +1,11 @@
+export { default as AddEditClientTemplate, type Employee } from '@src/components/templates/AddEditClientTemplate/AddEditClientTemplate';
+export { AuthTemplate } from '@src/components/templates/AuthTemplate/AuthTemplate';
+export { default as ClientDetailsTemplate, type ClientDetail, type InvoiceItem, type VisitItem } from '@src/components/templates/ClientDetailsTemplate/ClientDetailsTemplate';
+export { default as ClientsTemplate } from '@src/components/templates/ClientsTemplate/ClientsTemplate';
+export { default as CreateDiscountTemplate } from '@src/components/templates/CreateDiscountTemplate/CreateDiscountTemplate';
+export { default as CreateInvoiceTemplate } from '@src/components/templates/CreateInvoiceTemplate/CreateInvoiceTemplate';
+export { default as DiscountDetailsTemplate } from '@src/components/templates/DiscountDetailsTemplate/DiscountDetailsTemplate';
+export { default as DiscountsTemplate } from '@src/components/templates/DiscountsTemplate/DiscountsTemplate';
+export { MainTemplate } from '@src/components/templates/MainTemplate/MainTemplate';
+export { default as ReviewInvoiceTemplate } from '@src/components/templates/ReviewInvoiceTemplate/ReviewInvoiceTemplate';
+export { SalesHomeTemplate } from '@src/components/templates/SalesHomeTemplate/SalesHomeTemplate';

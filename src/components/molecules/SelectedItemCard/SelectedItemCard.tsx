@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, sp, wp } from '../../../utils/dimensions';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, sp, wp } from '@src/utils/dimensions';
 
 interface Props {
   name: string;

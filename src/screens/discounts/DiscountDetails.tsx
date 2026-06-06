@@ -1,10 +1,8 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
-import { TextAtom } from '../../components/atoms/Text/Text';
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
-import { hp, wp } from '../../utils/dimensions';
+import { TextAtom, AuthTemplate, DiscountDetailsTemplate } from '@src/components';
+import { hp, wp } from '@src/utils/dimensions';
 import { RouteProp, useRoute } from '@react-navigation/native';
-import DiscountDetailsTemplate from '../../components/templates/DiscountDetailsTemplate/DiscountDetailsTemplate';
 
 type Params = {
   discount: any;

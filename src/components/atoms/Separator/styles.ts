@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { hp } from "../../../utils/dimensions";
+import { hp } from "@src/utils/dimensions";
 
 const styles = StyleSheet.create({
    container: {

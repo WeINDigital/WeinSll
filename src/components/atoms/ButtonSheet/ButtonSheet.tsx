@@ -1,10 +1,10 @@
 import React from 'react';
 import {Pressable, StyleSheet, View } from 'react-native';
-import { hp, sp, wp } from '../../../utils/dimensions';
-import { ButtonSheetProps } from './ButtonSheet.type';
-import SvgView from '../SvgView/SvgView';
-import { Assets } from '../../../assets';
-import { TextAtom } from '../Text/Text';
+import { hp, sp, wp } from '@src/utils/dimensions';
+import { ButtonSheetProps } from '@src/components/atoms/ButtonSheet/ButtonSheet.type';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
+import { TextAtom } from '@src/components/atoms/Text/Text';
 
 
 

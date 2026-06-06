@@ -1,8 +1,8 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import ItemsSection from '../../organisms/ItemsSection/ItemsSection';
-import ClientName from '../../organisms/ClientName/ClientName';
-import Separator from '../../atoms/Separator';
+import ItemsSection from '@src/components/organisms/ItemsSection/ItemsSection';
+import ClientName from '@src/components/organisms/ClientName/ClientName';
+import Separator from '@src/components/atoms/Separator';
 
 interface Props {
   clientNameData?: { id?: string; value: string; text: string }[];

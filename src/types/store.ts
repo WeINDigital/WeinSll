@@ -1,4 +1,4 @@
-import type { AuthState, Invoice, Discount } from './domain';
+import type { AuthState, Invoice, Discount } from '@src/types/domain';
 
 export type InvoicesState = Record<string, Invoice>;
 export type DiscountsState = Record<string, Discount>;

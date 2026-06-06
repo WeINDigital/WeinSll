@@ -6,9 +6,9 @@ import {
   StyleSheet,
   FlatList,
 } from 'react-native';
-import SheetContainer from '../../molecules/SheetContainer/SheetContainer';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, wp } from '../../../utils/dimensions';
+import SheetContainer from '@src/components/molecules/SheetContainer/SheetContainer';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, wp } from '@src/utils/dimensions';
 
 const DATA = [
   { id: '1', name: 'Client One' },

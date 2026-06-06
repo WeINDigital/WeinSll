@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { TextAtom } from '../../atoms/Text/Text';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import DateInputAtom from '../../atoms/DateInputAtom/DateInputAtom';
-import { hp } from '../../../utils/dimensions';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import DateInputAtom from '@src/components/atoms/DateInputAtom/DateInputAtom';
+import { hp } from '@src/utils/dimensions';
 
 type Props = {
   label: string;

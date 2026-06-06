@@ -1,9 +1,8 @@
 import { View, Text } from 'react-native';
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Routes } from '../../navigation/routes';
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
-import { NewPasswordForm } from '../../components/organisms/NewPasswordForm/NewPasswordForm';
+import { Routes } from '@src/navigation/routes';
+import { AuthTemplate, NewPasswordForm } from '@src/components';
 
 
 export const NewPassword = () => {

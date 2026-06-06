@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Button } from '../../atoms/Button/Button';
-import { OTPInput } from '../../molecules/OTPInput/OTPInput';
+import { Button } from '@src/components/atoms/Button/Button';
+import { OTPInput } from '@src/components/molecules/OTPInput/OTPInput';
 
 interface Props {
   loading?: boolean;

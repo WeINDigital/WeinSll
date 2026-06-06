@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Pressable, View } from 'react-native';
-import { InputAtom } from '../../atoms/Input/Input';
-import { TextAtom } from '../../atoms/Text/Text';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import SvgView from '../../atoms/SvgView/SvgView';
-import { Assets } from '../../../assets';
-import { hp, wp } from '../../../utils/dimensions';
+import { InputAtom } from '@src/components/atoms/Input/Input';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
+import { hp, wp } from '@src/utils/dimensions';
 
 
 interface Props {

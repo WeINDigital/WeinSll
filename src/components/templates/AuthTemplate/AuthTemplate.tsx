@@ -7,10 +7,10 @@ import {
   ScrollView,
   ViewStyle,
 } from 'react-native';
-import { HeaderWithBack } from '../../molecules/HeaderWithBack/HeaderWithBack';
-import Separator from '../../atoms/Separator';
-import BottomContainer from '../../molecules/BottomContainer/BottomContainer';
-import { hp } from '../../../utils/dimensions';
+import { HeaderWithBack } from '@src/components/molecules/HeaderWithBack/HeaderWithBack';
+import Separator from '@src/components/atoms/Separator';
+import BottomContainer from '@src/components/molecules/BottomContainer/BottomContainer';
+import { hp } from '@src/utils/dimensions';
 
 interface Props{
   title?: string;

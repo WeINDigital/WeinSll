@@ -1,8 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { SalesHomeTemplate } from '../../../components/templates/SalesHomeTemplate/SalesHomeTemplate'
-import { dashboardData } from '../../../data'
-import { StatCard } from '../../../components/molecules/StatCard/StatCard'
+import { SalesHomeTemplate, StatCard } from '@src/components';
+import { dashboardData } from '@src/data'
 
 const SalesHome = () => {
   return (

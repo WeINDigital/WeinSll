@@ -1,7 +1,7 @@
 import React from 'react'
 import { Pressable } from 'react-native'
-import { TextAtom } from '../../atoms/Text/Text'
-import { fs, hp } from '../../../utils/dimensions'
+import { TextAtom } from '@src/components/atoms/Text/Text'
+import { fs, hp } from '@src/utils/dimensions'
 
 const AddNewItem = ({onPress}:{onPress:()=>void}) => {
 

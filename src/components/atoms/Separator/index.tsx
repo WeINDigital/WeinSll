@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import React from 'react';
-import styles from './styles';
+import styles from '@src/components/atoms/Separator/styles';
 
 
 const Separator = (props:any) => {

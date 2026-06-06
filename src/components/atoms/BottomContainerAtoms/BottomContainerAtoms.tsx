@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
-import { hp, sp } from '../../../utils/dimensions';
+import { hp, sp } from '@src/utils/dimensions';
 
 const BottomContainerAtoms = ({children}: { children: React.ReactNode }) => {
   return (

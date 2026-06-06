@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pressable, StyleSheet } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
+import { TextAtom } from '@src/components/atoms/Text/Text';
 
 const DiscountSelect = () => {
   return (

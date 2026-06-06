@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { View, StyleSheet, TextInput } from 'react-native';
-import { InputAtom } from '../../atoms/Input/Input';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, wp } from '../../../utils/dimensions';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
+import { InputAtom } from '@src/components/atoms/Input/Input';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, wp } from '@src/utils/dimensions';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 
 interface Props {
   value: string;

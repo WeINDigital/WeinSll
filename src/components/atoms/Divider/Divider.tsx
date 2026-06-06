@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { hp, sp } from '../../../utils/dimensions';
+import { hp, sp } from '@src/utils/dimensions';
 
 export const DividerAtom = () => (
   <View style={styles.divider} />

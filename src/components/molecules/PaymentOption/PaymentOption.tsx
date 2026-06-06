@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Pressable, StyleSheet } from 'react-native';
-import { RadioAtom } from '../../atoms/Radio/Radio';
-import { TextAtom } from '../../atoms/Text/Text';
+import { RadioAtom } from '@src/components/atoms/Radio/Radio';
+import { TextAtom } from '@src/components/atoms/Text/Text';
 
 interface Props {
   label: string;

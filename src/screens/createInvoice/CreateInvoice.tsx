@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate';
-import CreateInvoiceTemplate from '../../components/templates/CreateInvoiceTemplate/CreateInvoiceTemplate';
+import { AuthTemplate, CreateInvoiceTemplate } from '@src/components';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { Routes } from '../../navigation/routes';
+import { Routes } from '@src/navigation/routes';
 
 type Item = {
   id: string;
@@ -78,6 +77,7 @@ const onReview = () => {
         onDelete={() => {}}
         collectionDate={collectionDate}
   setCollectionDate={setCollectionDate}
+  
       />
     </AuthTemplate>
   );

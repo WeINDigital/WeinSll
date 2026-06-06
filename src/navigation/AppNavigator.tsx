@@ -1,18 +1,19 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Routes } from './routes';
-import Profile from '../screens/common/Profile';
-import Settings from '../screens/common/Settings';
-import Home from '../screens/common/Home/Home';
-import CreateInvoice from '../screens/createInvoice/CreateInvoice';
-import CameraScreen from '../screens/CameraScreen/CameraScreen';
-import ConfirmInvoice from '../screens/confirmInvoice/ConfirmInvoice';
-import Discounts from '../screens/discounts/Discounts';
-import Clients from '../screens/common/clients/Clients';
-import CreateDiscounts from '../screens/createDiscounts/CreateDiscounts';
-import DiscountDetails from '../screens/discounts/DiscountDetails';
-
-
+import { Routes } from '@src/navigation/routes';
+import Profile from '@src/screens/common/Profile';
+import Settings from '@src/screens/common/Settings';
+import Home from '@src/screens/common/Home/Home';
+import CreateInvoice from '@src/screens/createInvoice/CreateInvoice';
+import CameraScreen from '@src/screens/CameraScreen/CameraScreen';
+import ConfirmInvoice from '@src/screens/confirmInvoice/ConfirmInvoice';
+import Discounts from '@src/screens/discounts/Discounts';
+import Clients from '@src/screens/common/clients/Clients';
+import CreateDiscounts from '@src/screens/createDiscounts/CreateDiscounts';
+import DiscountDetails from '@src/screens/discounts/DiscountDetails';
+import AddClient from '@src/screens/common/clients/AddClient';
+import EditClient from '@src/screens/common/clients/EditClient';
+import ClientDetails from '@src/screens/common/clients/ClientDetails';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,9 @@ export default function AppNavigator() {
       <Stack.Screen name={Routes.CLIENTS} component={Clients} />
       <Stack.Screen name={Routes.CREATE_DISCOUNTS} component={CreateDiscounts} />
       <Stack.Screen name={Routes.DISCOUNT_DETAILS} component={DiscountDetails} />
+      <Stack.Screen name={Routes.ADD_CLIENT} component={AddClient} />
+      <Stack.Screen name={Routes.EDIT_CLIENT} component={EditClient} />
+      <Stack.Screen name={Routes.CLIENT_DETAILS} component={ClientDetails} />
     </Stack.Navigator>
   );
 }

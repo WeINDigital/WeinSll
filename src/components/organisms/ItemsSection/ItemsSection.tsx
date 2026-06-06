@@ -1,13 +1,13 @@
 import { View, Text, Pressable } from 'react-native';
 import React from 'react';
-import ScanItemsSection from '../ScanItemsSection/ScanItemsSection';
-import ItemRow from '../../molecules/ItemRow/ItemRow';
-import { TextAtom } from '../../atoms/Text/Text';
-import { hp, wp } from '../../../utils/dimensions';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import Separator from '../../atoms/Separator';
-import AddNewItem from '../../molecules/AddNewItem/AddNewItem';
-import { Routes } from '../../../navigation/routes';
+import ScanItemsSection from '@src/components/organisms/ScanItemsSection/ScanItemsSection';
+import ItemRow from '@src/components/molecules/ItemRow/ItemRow';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { hp, wp } from '@src/utils/dimensions';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import Separator from '@src/components/atoms/Separator';
+import AddNewItem from '@src/components/molecules/AddNewItem/AddNewItem';
+import { Routes } from '@src/navigation/routes';
 import { useNavigation } from '@react-navigation/native';
 
 type Item = {

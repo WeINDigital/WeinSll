@@ -1,13 +1,13 @@
 // components/organisms/HomeMenu/HomeMenu.tsx
 import React from 'react';
 import { View } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import SvgView from '../../atoms/SvgView/SvgView';
-import { Assets } from '../../../assets';
-import { hp, wp } from '../../../utils/dimensions';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import SvgView from '@src/components/atoms/SvgView/SvgView';
+import { Assets } from '@src/assets';
+import { hp, wp } from '@src/utils/dimensions';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Routes } from '../../../navigation/routes';
+import { Routes } from '@src/navigation/routes';
 
 const {
   images: {

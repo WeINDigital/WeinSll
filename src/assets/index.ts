@@ -1,9 +1,9 @@
 import {
   Images,
-} from './images';
+} from '@src/assets/images';
 // import {
 //   Fonts,
-// } from './fonts';
+// } from '@src/assets/fonts';
 
 export class Assets {
   static images = Images;

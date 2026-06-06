@@ -1,13 +1,13 @@
 import { View, Text, TextStyle } from 'react-native';
 import React from 'react';
-import RowView from '../../atoms/RowView/RowView';
-import { TextAtom } from '../../atoms/Text/Text';
-import RowText, { RowTextProps } from '../../molecules/RowText/RowText';
+import RowView from '@src/components/atoms/RowView/RowView';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import RowText, { RowTextProps } from '@src/components/molecules/RowText/RowText';
 import {
   getClientFormattedValue,
   getClientValueStyle,
-} from '../../../utils/HelperFuncations';
-import { hp } from '../../../utils/dimensions';
+} from '@src/utils/HelperFuncations';
+import { hp } from '@src/utils/dimensions';
 
 interface Props extends RowTextProps {
   item?: { value: string; text: string }[];

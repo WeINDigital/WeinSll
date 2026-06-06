@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { fs, hp, sp } from '../../../utils/dimensions';
+import { fs, hp, sp } from '@src/utils/dimensions';
 
 export const colors = {
   primary: '#6C5CE7',

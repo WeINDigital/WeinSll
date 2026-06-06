@@ -1,9 +1,9 @@
 import React, { useCallback, useContext } from 'react';
 
-import SalesHome from './SalesHome';
-import { AuthContext } from '../../../context/AuthContext';
-import SupervisorHome from './SupervisorHome';
-import ManagerHome from './ManagerHome';
+import SalesHome from '@src/screens/common/Home/SalesHome';
+import { AuthContext } from '@src/context/AuthContext';
+import SupervisorHome from '@src/screens/common/Home/SupervisorHome';
+import ManagerHome from '@src/screens/common/Home/ManagerHome';
 import { BackHandler } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 

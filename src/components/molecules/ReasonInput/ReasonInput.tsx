@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
-import { InputAtom } from '../../atoms/Input/Input';
-import { SpacerAtom } from '../../atoms/Spacer/Spacer';
-import { hp } from '../../../utils/dimensions';
+import { TextAtom } from '@src/components/atoms/Text/Text';
+import { InputAtom } from '@src/components/atoms/Input/Input';
+import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
+import { hp } from '@src/utils/dimensions';
 
 interface Props {
   value?: string;

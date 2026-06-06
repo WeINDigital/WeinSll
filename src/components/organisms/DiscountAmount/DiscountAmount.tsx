@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { hp, sp, wp } from '../../../utils/dimensions';
-import { InputWithIcon } from '../../molecules/InputWithIcon/InputWithIcon';
-import ReasonInput from '../../molecules/ReasonInput/ReasonInput';
-import MultiSelectItemSheet, { SelectableItem } from '../MultiSelectItemSheet/MultiSelectItemSheet';
-import SelectedItemCard from '../../molecules/SelectedItemCard/SelectedItemCard';
+import { hp, sp, wp } from '@src/utils/dimensions';
+import { InputWithIcon } from '@src/components/molecules/InputWithIcon/InputWithIcon';
+import ReasonInput from '@src/components/molecules/ReasonInput/ReasonInput';
+import MultiSelectItemSheet, { SelectableItem } from '@src/components/organisms/MultiSelectItemSheet/MultiSelectItemSheet';
+import SelectedItemCard from '@src/components/molecules/SelectedItemCard/SelectedItemCard';
 
 interface Props {
   paymentType?: string;

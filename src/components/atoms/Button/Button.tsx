@@ -5,8 +5,8 @@ import {
   ActivityIndicator,
   View,
 } from 'react-native';
-import { ButtonProps } from './button.types';
-import { styles, colors } from './button.styles';
+import { ButtonProps } from '@src/components/atoms/Button/button.types';
+import { styles, colors } from '@src/components/atoms/Button/button.styles';
 
 export const Button: React.FC<ButtonProps> = ({
   title,

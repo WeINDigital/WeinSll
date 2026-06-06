@@ -1,7 +1,7 @@
 import { View, Text, TextStyle, StyleProp } from 'react-native'
 import React from 'react'
-import RowView from '../../atoms/RowView/RowView'
-import { TextAtom } from '../../atoms/Text/Text'
+import RowView from '@src/components/atoms/RowView/RowView'
+import { TextAtom } from '@src/components/atoms/Text/Text'
 
 export interface RowTextProps {
   txt1?: string;

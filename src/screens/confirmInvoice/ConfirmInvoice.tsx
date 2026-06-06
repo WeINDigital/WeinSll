@@ -1,9 +1,8 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { AuthTemplate } from '../../components/templates/AuthTemplate/AuthTemplate'
+import { AuthTemplate, ReviewInvoiceTemplate } from '@src/components';
 import { useRoute } from '@react-navigation/native';
-import ReviewInvoiceTemplate from '../../components/templates/ReviewInvoiceTemplate/ReviewInvoiceTemplate';
-import { amountData, clientNameData, paymentTypeData } from '../../data';
+import { amountData, clientNameData, paymentTypeData } from '@src/data';
 
 const ConfirmInvoice = () => {
      const route = useRoute<any>();

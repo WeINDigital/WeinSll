@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pressable, View, StyleSheet } from 'react-native';
-import { TextAtom } from '../Text/Text';
+import { TextAtom } from '@src/components/atoms/Text/Text';
 
 type Props = {
   label: string;

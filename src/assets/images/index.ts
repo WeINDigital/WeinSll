@@ -1,12 +1,12 @@
 // import {
 //   Common,
-// } from './common';
+// } from '@src/assets/images/common';
 // import {
 //   Screens,
-// } from './screens';
+// } from '@src/assets/images/screens';
 import {
   Components,
-} from './components';
+} from '@src/assets/images/components';
 
 export class Images {
   // static common = Common;

@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import React from 'react'
-import SelectClientSheet from '../SelectClientSheet/SelectClientSheet'
-import { wp } from '../../../utils/dimensions';
+import SelectClientSheet from '@src/components/organisms/SelectClientSheet/SelectClientSheet'
+import { wp } from '@src/utils/dimensions';
 
 const DiscountSection = () => {
         const [discount, setDiscount] = React.useState('');

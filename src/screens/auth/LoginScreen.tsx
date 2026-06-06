@@ -1,9 +1,9 @@
 import React, { use, useContext, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { View } from 'react-native';
-import { LoginForm } from '../../components/organisms/LoginForm/LoginForm';
-import { Routes } from '../../navigation/routes';
-import { AuthContext } from '../../context/AuthContext';
+import { LoginForm } from '@src/components';
+import { Routes } from '@src/navigation/routes';
+import { AuthContext } from '@src/context/AuthContext';
 
 export const Login = () => {
   const navigation = useNavigation<any>();

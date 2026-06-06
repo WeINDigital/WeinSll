@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import styles from './styles';
-import { SvgViewProps } from './types';
-import { hp, wp } from '../../../utils/dimensions';
+import styles from '@src/components/atoms/SvgView/styles';
+import { SvgViewProps } from '@src/components/atoms/SvgView/types';
+import { hp, wp } from '@src/utils/dimensions';
 
 export const SvgView: React.FC<SvgViewProps> = ({
   svgFile: SvgComponent,

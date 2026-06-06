@@ -1,10 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Routes } from './routes';
-import { ForgotPassword } from '../screens/auth/ForgotPasswordScreen';
-import { ResetCode } from '../screens/auth/ResetCode';
-import { NewPassword } from '../screens/auth/NewPassword';
-import { Login } from '../screens/auth/LoginScreen';
+import { Routes } from '@src/navigation/routes';
+import { ForgotPassword } from '@src/screens/auth/ForgotPasswordScreen';
+import { ResetCode } from '@src/screens/auth/ResetCode';
+import { NewPassword } from '@src/screens/auth/NewPassword';
+import { Login } from '@src/screens/auth/LoginScreen';
 
 
 const Stack = createNativeStackNavigator();

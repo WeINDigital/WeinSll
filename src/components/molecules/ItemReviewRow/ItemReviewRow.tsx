@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { TextAtom } from '../../atoms/Text/Text';
+import { TextAtom } from '@src/components/atoms/Text/Text';
 
 type Props = {
   index: number;
