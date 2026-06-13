@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { AddEditClientTemplate, type Employee } from '@src/components';
 let nextEmpId = 1;
 
-const AddClient = () => {
+const salesmanData = [
+ { id: '1', name: 'ahmed' },
+  { id: '2', name: 'mohamed' },
+  { id: '3', name: 'ali' },
+]
+const AddClient = ({ route }:any) => {
   const navigation = useNavigation();
+  const { role } = route.params || {};
 
+  console.log("role",role);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [secondPhone, setSecondPhone] = useState('');
@@ -39,6 +46,8 @@ const AddClient = () => {
       onRemoveEmployee={removeEmployee}
       onEmployeeChange={updateEmployee}
       onSave={handleSave}
+      role={role}
+      salesmanData={salesmanData}
     />
   );
 };

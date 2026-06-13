@@ -21,6 +21,11 @@ import Inventory from '@src/screens/inventory/Inventory';
 import VisitForum from '@src/screens/visitForum/VisitForum';
 import VisitDetails from '@src/screens/visitForum/VisitDetails';
 import AddVisit from '@src/screens/visitForum/AddVisit';
+import SalesTransactions from '@src/screens/salesTransactions/SalesTransactions';
+import SalesTransactionDetails from '@src/screens/salesTransactions/SalesTransactionDetails';
+import CreateSurvey from '@src/screens/visitForum/CreateSurvey';
+import Salesmen from '@src/screens/salesmen/Salesmen';
+import SalesmanProfile from '@src/screens/salesmen/SalesmanProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +52,11 @@ export default function AppNavigator() {
       <Stack.Screen name={Routes.VISIT_FORUM} component={VisitForum} />
       <Stack.Screen name={Routes.VISIT_DETAILS} component={VisitDetails} />
       <Stack.Screen name={Routes.ADD_VISIT} component={AddVisit} />
+      <Stack.Screen name={Routes.SALES_TRANSACTIONS} component={SalesTransactions} />
+      <Stack.Screen name={Routes.SALES_TRANSACTION_DETAILS} component={SalesTransactionDetails} />
+      <Stack.Screen name={Routes.CREATE_SURVEY} component={CreateSurvey} />
+      <Stack.Screen name={Routes.SALESMEN} component={Salesmen} />
+      <Stack.Screen name={Routes.SALESMAN_PROFILE} component={SalesmanProfile} />
     </Stack.Navigator>
   );
 }

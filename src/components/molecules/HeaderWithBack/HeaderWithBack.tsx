@@ -6,18 +6,21 @@ import SvgView from '@src/components/atoms/SvgView/SvgView';
 import { Assets } from '@src/assets';
 import { useNavigation } from '@react-navigation/native';
 import StatusBadge from '@src/components/atoms/StatusBadge/StatusBadge';
+import { Separator } from '@src/components/atoms';
 
 
 interface Props {
   title: string | undefined;
   onBack?: () => void;
   status?:'approved' | 'rejected' | 'in_progress';
+  rightElement?: React.ReactNode;
 }
 
 export const HeaderWithBack: React.FC<Props> = ({
   title,
   onBack,
   status,
+  rightElement,
 }) => {
     const {
       images: {
@@ -36,11 +39,7 @@ export const HeaderWithBack: React.FC<Props> = ({
         {title}
       </TextAtom>
     </View>
-    {
-      status && (
-       <StatusBadge status={status} />
-      )
-    }
+    {rightElement ?? (status && <StatusBadge status={status} />)}
     </View>
   );
 };

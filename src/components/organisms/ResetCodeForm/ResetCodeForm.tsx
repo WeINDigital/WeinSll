@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button } from '@src/components/atoms/Button/Button';
 import { OTPInput } from '@src/components/molecules/OTPInput/OTPInput';
+import { SpacerAtom } from '@src/components/atoms';
+import { hp } from '@src/utils/dimensions';
 
 interface Props {
   loading?: boolean;
@@ -29,11 +31,10 @@ export const ResetCodeForm: React.FC<Props> = ({
         onPress={() => onSubmit(code)}
       />
 
-      <View style={styles.spacer} />
-
+    <SpacerAtom height={hp(16)}/>
       <Button
         title="Resend Code"
-        variant="outline"
+        variant='ghost'
         onPress={onResend}
       />
     </View>
@@ -44,9 +45,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 20,
   },
-  spacer: {
-    height: 16,
-  },
+
   spacerLg: {
     height: 32,
   },

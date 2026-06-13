@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, FlatListProps } from 'react-native';
 import { ListAtom } from '@src/components/atoms/ListAtom/ListAtom';
 import { TextAtom } from '@src/components/atoms/Text/Text';
 import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
@@ -17,6 +17,7 @@ export const SectionList: React.FC<Props> = ({
   data,
   renderItem,
   onViewAll,
+  ...props
 }) => {
   return (
     <View>
@@ -33,7 +34,7 @@ export const SectionList: React.FC<Props> = ({
 
           {onViewAll && data.length > 5 && (
             <TouchableOpacity onPress={onViewAll}>
-              <TextAtom variant="body">View all</TextAtom>
+              <TextAtom variant="body" style={{color:'rgba(105, 65, 198, 1)'}}>View all</TextAtom>
             </TouchableOpacity>
           )}
         </View>
@@ -47,6 +48,7 @@ export const SectionList: React.FC<Props> = ({
         contentContainerStyle={{
           paddingBottom: hp(150),
         }}
+        {...props}
       />
     </View>
   );

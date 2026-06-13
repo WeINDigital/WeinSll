@@ -14,5 +14,14 @@ export { default as ReceiptsCenterTemplate } from '@src/components/templates/Rec
 export { default as CollectionsTemplate, type CollectionItem } from '@src/components/templates/CollectionsTemplate/CollectionsTemplate';
 export { default as InventoryTemplate } from '@src/components/templates/InventoryTemplate/InventoryTemplate';
 export { default as VisitForumTemplate } from '@src/components/templates/VisitForumTemplate/VisitForumTemplate';
-export { default as VisitDetailsTemplate, type VisitItem } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
+export { default as VisitDetailsTemplate } from '@src/components/templates/VisitDetailsTemplate/VisitDetailsTemplate';
 export { default as AddVisitTemplate } from '@src/components/templates/AddVisitTemplate/AddVisitTemplate';
+export { default as SupervisorHomeTemplate } from '@src/components/templates/SupervisorHomeTemplate/SupervisorHomeTemplate';
+export { default as SalesTransactionsTemplate } from '@src/components/templates/SalesTransactionsTemplate/SalesTransactionsTemplate';
+export { default as SalesTransactionDetailsTemplate } from '@src/components/templates/SalesTransactionDetailsTemplate/SalesTransactionDetailsTemplate';
+export type { SalesTransactionDetail } from '@src/components/templates/SalesTransactionDetailsTemplate/SalesTransactionDetailsTemplate';
+export { default as CreateSurveyTemplate} from '@src/components/templates/CreateSurveyTemplate/CreateSurveyTemplate'
+export { default as SalesmenTemplate } from '@src/components/templates/SalesmenTemplate/SalesmenTemplate';
+export type { Salesman } from '@src/components/templates/SalesmenTemplate/SalesmenTemplate';
+export { default as SalesmanProfileTemplate } from '@src/components/templates/SalesmanProfileTemplate/SalesmanProfileTemplate';
+export type { SalesmanProfileData, SalesmanStat, SalesmanReceipt, SalesmanDiscount } from '@src/components/templates/SalesmanProfileTemplate/SalesmanProfileTemplate';

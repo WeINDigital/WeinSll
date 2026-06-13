@@ -17,7 +17,7 @@ const handleLogin = async (data: {
  setLoading(true);
 
   setTimeout(() => {
-    login("salesman");  
+    login("supervisor");  
     setLoading(false);
   }, 1500);
 };

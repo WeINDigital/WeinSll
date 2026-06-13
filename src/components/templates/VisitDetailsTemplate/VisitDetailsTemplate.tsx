@@ -13,6 +13,8 @@ export type VisitItem = {
   reasons: string;
   outcome: string;
   visitDate: string;
+  salesman?:string;
+  clientImage?:any
 };
 
 interface Props {

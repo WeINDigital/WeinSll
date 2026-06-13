@@ -25,6 +25,9 @@ import user from '@src/assets/images/components/user.svg';
 import users from '@src/assets/images/components/users.svg';
 import closeIcon from '@src/assets/images/components/closeIcon.svg';
 import dropDown from '@src/assets/images/components/dropDown.svg';
+import salesmen from '@src/assets/images/components/salesmen.svg';
+import creditCardBlack from '@src/assets/images/components/credit-card.svg';
+import truck from '@src/assets/images/components/truck.svg';
 
 export class Components {
   static backIcon = BackIcon;
@@ -54,5 +57,8 @@ export class Components {
   static users = users;
   static closeIcon = closeIcon;
   static dropDown = dropDown;
+  static salesman = salesmen;
+  static creditCardBlack= creditCardBlack;
+  static truck = truck;
   static clintImage = require('./clintImage.png');
 }

@@ -10,6 +10,7 @@ import { SpacerAtom } from '@src/components/atoms/Spacer/Spacer';
 import CameraAtom from '@src/components/atoms/CameraAtom/CameraAtom';
 import { Assets } from '@src/assets';
 import { hp, sp, wp } from '@src/utils/dimensions';
+import { ClientSection } from '@src/components/organisms';
 
 export type Employee = { id: string; name: string; phone: string };
 
@@ -33,6 +34,8 @@ interface Props {
   onEmployeeChange: (id: string, field: 'name' | 'phone', value: string) => void;
   onSave: () => void;
   loading?: boolean;
+  salesmanData?:[],
+  role?:string
 }
 
 const AddEditClientTemplate: React.FC<Props> = ({
@@ -46,6 +49,8 @@ const AddEditClientTemplate: React.FC<Props> = ({
   onAddEmployee, onRemoveEmployee, onEmployeeChange,
   onSave,
   loading,
+  salesmanData,
+  role
 }) => {
   const [photoUri, setPhotoUri] = useState<string | null>(null);
 
@@ -146,6 +151,13 @@ const AddEditClientTemplate: React.FC<Props> = ({
               onChangeText={onLocationChange}
               icon={map}
             />
+
+            {role === 'supervisor' && (
+              <>
+              <SpacerAtom height={hp(16)}/>
+            <ClientSection data={salesmanData} title='Salesman' />
+            </>)}
+
 
             <SpacerAtom height={hp(16)} />
             <TextAtom variant="subtitle" fw="500">Items</TextAtom>

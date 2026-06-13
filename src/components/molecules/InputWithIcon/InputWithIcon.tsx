@@ -10,6 +10,7 @@ import { hp, wp } from '@src/utils/dimensions';
 
 interface Props extends Omit<TextInputProps, 'value' | 'onChangeText'> {
   icon?: any;
+  rightIcon?: any;
   value?: string | number;
   label?: string;
   placeholder?: string;
@@ -19,29 +20,29 @@ interface Props extends Omit<TextInputProps, 'value' | 'onChangeText'> {
 
 export const InputWithIcon: React.FC<Props> = ({
   icon,
+  rightIcon,
   label,
   width,
   ...props
 }) => {
   return (
     <View style={{ width: width ? width : '100%' } as any}>
-      {label &&(
+      {label && (
         <>
-        <TextAtom variant='subtitle' fw="500">{label}</TextAtom>
-            <SpacerAtom width={"100%"} height={hp(6)}/>
+          <TextAtom variant="subtitle" fw="500">{label}</TextAtom>
+          <SpacerAtom width="100%" height={hp(6)} />
         </>
-      )
-      }
-     
+      )}
       <InputAtom
         {...props}
-       {...(icon && {
+        {...(icon && {
           leftIcon: (
-            <SvgView
-              svgFile={icon}
-              width={wp(20)}
-              height={hp(20)}
-            />
+            <SvgView svgFile={icon} width={wp(20)} height={hp(20)} />
+          ),
+        })}
+        {...(rightIcon && {
+          rightIcon: (
+            <SvgView svgFile={rightIcon} width={wp(20)} height={hp(20)} />
           ),
         })}
       />

@@ -70,5 +70,8 @@ const styles = StyleSheet.create({
   input:{
     textAlign: 'center',
     fontSize: 24,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
   }
 });

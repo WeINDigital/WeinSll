@@ -5,6 +5,7 @@ export const ListAtom = (props: any) => {
   return (
     <FlatList
       {...props}
+      showsHorizontalScrollIndicator={false}
       showsVerticalScrollIndicator={false}
     />
   );

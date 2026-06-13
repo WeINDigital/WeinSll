@@ -16,4 +16,7 @@ export type AppStackParamList = {
   Discounts:undefined;
   Clients:undefined;
   CreateDiscounts:undefined;
+  CreateSurvey:undefined;
+  Salesmen: undefined;
+  SalesmanProfile: { salesmanId: string };
 };

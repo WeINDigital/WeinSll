@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Pressable } from 'react-native';
 import { CardAtom } from '@src/components/atoms/Card/Card';
 import { TextAtom } from '@src/components/atoms/Text/Text';
 import { hp, sp, wp } from '@src/utils/dimensions';
@@ -10,9 +10,10 @@ interface Props {
   title: string;
   value: string;
   percent?: string;
+  onViewReport?: () => void;
 }
 
-export const StatCard: React.FC<Props> = ({ title, value, percent }) => {
+export const StatCard: React.FC<Props> = ({ title, value, percent, onViewReport }) => {
   const {
     images: {
       components: { homeChart, arrowup },
@@ -38,6 +39,11 @@ export const StatCard: React.FC<Props> = ({ title, value, percent }) => {
         </View>
         <SvgView svgFile={homeChart} width={wp(96)} height={hp(48)} />
       </View>
+      {onViewReport && (
+        <Pressable onPress={onViewReport} style={styles.viewReport}>
+          <TextAtom style={styles.viewReportText}>View Report</TextAtom>
+        </Pressable>
+      )}
     </CardAtom>
   );
 };
@@ -66,12 +72,12 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 
-  chart: {
-    height: sp(40),
-    width: wp(30),
-    backgroundColor: '#E6F9EF',
-    borderRadius: sp(10),
+  viewReport: {
     alignSelf: 'flex-end',
-    marginTop: sp(10),
+    marginTop: sp(8),
+  },
+  viewReportText: {
+    color: '#7F56D9',
+    fontWeight: '600',
   },
 });

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Image, Pressable, StyleSheet, Linking } from 'react-native';
+import { View, Image, Pressable, StyleSheet, Linking, TouchableOpacity } from 'react-native';
 import { CardAtom } from '@src/components/atoms/Card/Card';
 import { TextAtom } from '@src/components/atoms/Text/Text';
 import SvgView from '@src/components/atoms/SvgView/SvgView';
@@ -15,6 +15,8 @@ export type Client = {
   location: string;
   phone: string;
   employees?: { id: string; name: string; phone: string }[];
+  amount?:number,
+  salesName?:string
 };
 
 type Props = {
@@ -26,12 +28,12 @@ type Props = {
 
 const ClientCard: React.FC<Props> = ({ item, onPress, onRequestDiscount, onEdit }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { images: { components: { clintImage, mapcolor, phoneColor } } } = Assets;
+  const { images: { components: { clintImage, mapcolor, phoneColor,truck,creditCardBlack,creditCardGray } } } = Assets;
 
   return (
-    <Pressable onPress={onPress}>
+    <View>
       <CardAtom style={{ overflow: 'visible' }}>
-        <View style={styles.topRow}>
+        <TouchableOpacity style={styles.topRow} onPress={onPress}>
           <View style={styles.nameRow}>
             <Image source={clintImage} style={styles.avatar} />
             <View>
@@ -63,7 +65,23 @@ const ClientCard: React.FC<Props> = ({ item, onPress, onRequestDiscount, onEdit 
               </View>
             )}
           </View>
+        </TouchableOpacity>
+        {item.amount && item.salesName  ? (
+          <>
+                      <SpacerAtom height={hp(16)}/>
+        <View style={styles.topRow}>
+            <View style = {styles.nameRow}>
+              <SvgView svgFile={creditCardGray} width={wp(16)} height={hp(16)}/>
+              <TextAtom variant="subtitle" fw="400">{`${item.amount} EGP`}</TextAtom>
+            </View>
+            <View style = {styles.nameRow}>
+              <SvgView svgFile={truck} width={wp(16)} height={hp(16)}/>
+              <TextAtom>{item.salesName}</TextAtom>
+            </View>
         </View>
+          </>
+        ) : null}
+
 
         <SpacerAtom height={hp(12)} />
         <Separator />
@@ -83,7 +101,7 @@ const ClientCard: React.FC<Props> = ({ item, onPress, onRequestDiscount, onEdit 
           </Pressable>
         </View>
       </CardAtom>
-    </Pressable>
+    </View>
   );
 };
 

@@ -1,5 +1,5 @@
 // components/organisms/HomeMenu/HomeMenu.tsx
-import React from 'react';
+import React, { useContext } from 'react';
 import { View } from 'react-native';
 import { TextAtom } from '@src/components/atoms/Text/Text';
 import SvgView from '@src/components/atoms/SvgView/SvgView';
@@ -8,70 +8,49 @@ import { hp, wp } from '@src/utils/dimensions';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Routes } from '@src/navigation/routes';
+import { AuthContext } from '@src/context/AuthContext';
 
 const {
   images: {
     components: {
       home,
       users,
+      user,
       percent,
       shoppingBag,
       creditCard,
       fileText,
       lifeBuoy,
+      salesman
     },
   },
 } = Assets;
 
+const SUB = 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
-  const menuItems = [
-  { title: 'Home', icon: home,screenName:Routes.HOME },
-  {
-    title: 'Clients',
-    icon: users,
-    subTitle:
-      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:Routes.CLIENTS,
-  },
-  {
-    title: 'Discounts',
-    icon: percent,
-    subTitle:
-      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:Routes.DISCOUNTS,
-  },
-  {
-    title: 'Receipts Center',
-    icon: fileText,
-    subTitle:
-      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:Routes.RECEIPTS_CENTER,
-  },
-  {
-    title: 'Collections',
-    icon: creditCard,
-    subTitle:
-      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:Routes.COLLECTIONS,
-  },
-  {
-    title: 'Inventory',
-    icon: shoppingBag,
-    subTitle:
-      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:Routes.INVENTORY,
-  },
-  {
-    title: 'Visit Forum',
-    icon: lifeBuoy,
-    subTitle:
-      'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    screenName:Routes.VISIT_FORUM,
-  },
+const salesmanMenu = [
+  { title: 'Home', icon: home, screenName: Routes.HOME },
+  { title: 'Clients', icon: users, subTitle: SUB, screenName: Routes.CLIENTS },
+  { title: 'Discounts', icon: percent, subTitle: SUB, screenName: Routes.DISCOUNTS },
+  { title: 'Receipts Center', icon: fileText, subTitle: SUB, screenName: Routes.RECEIPTS_CENTER },
+  { title: 'Collections', icon: creditCard, subTitle: SUB, screenName: Routes.COLLECTIONS },
+  { title: 'Inventory', icon: shoppingBag, subTitle: SUB, screenName: Routes.INVENTORY },
+  { title: 'Visit Forum', icon: lifeBuoy, subTitle: SUB, screenName: Routes.VISIT_FORUM },
 ];
 
-const HomeMenu = ({ onClose,onLogOut}: { onClose: () => void,onLogOut :()=>void }) => {
+const supervisorMenu = [
+  { title: 'Home', icon: home, screenName: Routes.HOME },
+  { title: 'Clients', icon: users, subTitle: SUB, screenName: Routes.CLIENTS },
+  { title: 'Salesmen', icon: salesman, subTitle: SUB, screenName: Routes.SALESMEN },
+  { title: 'Receipts Center', icon: fileText, subTitle: SUB, screenName: Routes.RECEIPTS_CENTER },
+  { title: 'Discounts', icon: percent, subTitle: SUB, screenName: Routes.DISCOUNTS },
+  { title: 'Visit Forum', icon: lifeBuoy, subTitle: SUB, screenName: Routes.VISIT_FORUM },
+];
+
+const HomeMenu = ({ onClose, onLogOut }: { onClose: () => void; onLogOut: () => void }) => {
   const navigation = useNavigation<any>();
+  const { role } = useContext(AuthContext);
+  const menuItems = role === 'supervisor' ? supervisorMenu : salesmanMenu;
 
  const handleNavigate = (screen: string) => {
     navigation.navigate(screen);

@@ -24,4 +24,9 @@ export const Routes = {
   VISIT_FORUM: 'VisitForum',
   VISIT_DETAILS: 'VisitDetails',
   ADD_VISIT: 'AddVisit',
+  SALES_TRANSACTIONS: 'SalesTransactions',
+  SALES_TRANSACTION_DETAILS: 'SalesTransactionDetails',
+  CREATE_SURVEY:'CreateSurvey',
+  SALESMEN: 'Salesmen',
+  SALESMAN_PROFILE: 'SalesmanProfile',
 };
